@@ -15,7 +15,7 @@ const faqGroups = [
     items: [
       {
         q: 'How do employees access their benefits?',
-        a: 'Employees log in to the Welluber member app using their corporate email. Once HR activates their account and assigns a benefit policy, their wallet is live — they can browse providers, purchase vouchers, or walk in to any listed service provider.',
+        a: 'Employees log in using their corporate email. Once HR activates their account and assigns a benefit policy, their wallet is live — they can browse providers, purchase vouchers, or walk in to any listed service provider.',
       },
       {
         q: "What happens if an employee doesn't spend their full allocation?",
@@ -23,7 +23,7 @@ const faqGroups = [
       },
       {
         q: 'Can we set different benefit policies for different employee groups?',
-        a: 'Yes. Welluber supports multiple benefit policies per organisation. You can assign policies by role, department, or employment type. Full-time and part-time employees can have entirely separate entitlements.',
+        a: 'Yes. You can assign policies by role, department, or employment type. Full-time and part-time employees can have entirely separate entitlements.',
       },
       {
         q: 'How does Welluber handle compliance and reporting?',
@@ -44,7 +44,7 @@ const faqGroups = [
       },
       {
         q: 'When and how do I receive payment?',
-        a: 'Payments are settled on a monthly cycle to your registered bank account. You can view your pending payouts, transaction history, and settlement status in real time through the SP portal.',
+        a: 'Payments are settled monthly to your registered bank account. You can view your pending payouts, transaction history, and settlement status in real time through the SP portal.',
       },
       {
         q: 'Do employees pay me directly or does Welluber?',
@@ -57,7 +57,7 @@ const faqGroups = [
     items: [
       {
         q: 'Is there a mobile app?',
-        a: 'The member experience is currently a responsive web app optimised for mobile — no App Store download required. A native iOS and Android app is on the roadmap for Phase 2.',
+        a: 'The member experience is a responsive web app optimised for mobile — no App Store download required. A native iOS and Android app is on the roadmap for Phase 2.',
       },
       {
         q: 'How long does setup take?',

@@ -61,7 +61,7 @@ _(Keep as-is — clean and direct.)_
 
 **Overline:** BUILT FOR
 
-**H2:** One platform. Three stakeholders.
+**H2:** Built for everyone in the chain.
 
 _(Keep as-is.)_
 
