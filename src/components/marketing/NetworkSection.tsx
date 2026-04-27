@@ -23,14 +23,14 @@ function PersonaCard({ nodeRef, icon, role, description, photo, photoAlt }: Pers
     <div className="relative flex min-h-[160px] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
       {/* Left — icon + copy */}
       <div className="flex flex-1 flex-col gap-3 p-5">
-        <div className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-[color:var(--color-brand-faint)] text-[color:var(--color-brand)]">
+        <div className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-brand-faint text-brand">
           {icon}
         </div>
         <div>
-          <p className="font-[family-name:var(--font-poppins)] text-base font-bold text-gray-900">
+          <p className="font-poppins text-base font-bold text-gray-900">
             {role}
           </p>
-          <p className="mt-1.5 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-500">
+          <p className="mt-1.5 font-geist text-sm leading-relaxed text-gray-500">
             {description}
           </p>
         </div>
@@ -78,13 +78,13 @@ export function NetworkSection() {
       <Container>
         <BlurFade inView delay={0.1}>
           <div className="mb-10 text-center sm:mb-12 lg:mb-16">
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-brand)]">
+            <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">
               THE PLATFORM
             </p>
-            <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
+            <h2 className="mt-3 font-poppins text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
               One wallet. Three sides. No paperwork in between.
             </h2>
-            <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-inter)] text-base text-gray-500">
+            <p className="mx-auto mt-4 max-w-xl font-geist text-base text-gray-500">
               Most benefits platforms serve one stakeholder. WellUber was built for all three.
             </p>
           </div>
@@ -130,7 +130,7 @@ export function NetworkSection() {
               />
               <div
                 ref={centerRef}
-                className="relative z-10 flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-[color:var(--color-brand)] shadow-lg"
+                className="relative z-10 flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-brand shadow-lg"
               >
                 <img
                   src="/favicon-white.svg"

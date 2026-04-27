@@ -16,7 +16,7 @@ export function OrgListFragment() {
       {/* Table header */}
       <div className="flex items-center border-b border-gray-200 bg-gray-50 px-4 py-2">
         {['Organisation', 'Branch', 'Status', 'Utilisation'].map((h) => (
-          <span key={h} className="flex-1 font-[family-name:var(--font-inter)] text-[9px] font-semibold uppercase tracking-wider text-gray-400">
+          <span key={h} className="flex-1 font-geist text-[9px] font-semibold uppercase tracking-wider text-gray-400">
             {h}
           </span>
         ))}
@@ -36,16 +36,16 @@ export function OrgListFragment() {
           </div>
           {/* Status */}
           <div className="flex-1 min-w-0">
-            <span className={`inline-block rounded-full px-2 py-0.5 font-[family-name:var(--font-inter)] text-[8px] font-medium ${statusColors[row.status]}`}>
+            <span className={`inline-block rounded-full px-2 py-0.5 font-geist text-[8px] font-medium ${statusColors[row.status]}`}>
               {row.status}
             </span>
           </div>
           {/* Utilisation + trend */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5">
-              <span className="font-[family-name:var(--font-inter)] text-[10px] font-medium text-gray-900">{row.util}</span>
+              <span className="font-geist text-[10px] font-medium text-gray-900">{row.util}</span>
               {row.trend && (
-                <span className="font-[family-name:var(--font-inter)] text-[9px] font-medium text-emerald-500">{row.trend}</span>
+                <span className="font-geist text-[9px] font-medium text-emerald-500">{row.trend}</span>
               )}
             </div>
             {row.trend && (
@@ -62,9 +62,9 @@ export function OrgListFragment() {
 
       {/* Summary footer */}
       <div className="flex items-center justify-between px-4 py-2.5 bg-gray-50/50">
-        <span className="font-[family-name:var(--font-inter)] text-[9px] text-gray-400">3 organisations total</span>
+        <span className="font-geist text-[9px] text-gray-400">3 organisations total</span>
         <div className="flex items-center gap-1">
-          <span className="font-[family-name:var(--font-inter)] text-[9px] text-gray-400">Combined</span>
+          <span className="font-geist text-[9px] text-gray-400">Combined</span>
           <div className="h-3 w-10 rounded bg-gray-200" />
         </div>
       </div>

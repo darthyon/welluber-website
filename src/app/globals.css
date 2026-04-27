@@ -40,7 +40,7 @@
 
   /* Fonts */
   --font-poppins: var(--font-poppins);
-  --font-inter: var(--font-inter);
+  --font-geist: var(--font-geist);
 
   /* Animations */
   --animate-marquee: marquee var(--duration) linear infinite;

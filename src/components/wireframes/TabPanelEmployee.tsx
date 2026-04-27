@@ -34,7 +34,7 @@ export function TabPanelEmployee() {
               My Benefits
             </p>
           </div>
-          <span className="text-[18px] font-bold font-[family-name:var(--font-poppins)]">RM 485</span>
+          <span className="text-[18px] font-bold font-poppins">RM 485</span>
         </div>
         <p className="mt-0.5 text-[11px] opacity-70">Available balance</p>
       </div>
@@ -48,13 +48,13 @@ export function TabPanelEmployee() {
           {benefits.map((b, i) => (
             <div key={i} className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="text-[color:var(--color-brand)]">{b.icon}</span>
+                <span className="text-brand">{b.icon}</span>
                 <span className="text-[11px] font-medium text-gray-700">{b.name}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-16 overflow-hidden rounded-full bg-gray-100">
                   <div
-                    className="h-full rounded-full bg-[color:var(--color-brand)]"
+                    className="h-full rounded-full bg-brand"
                     style={{ width: `${Math.round((parseInt(b.used.replace(/\D/g, '')) / parseInt(b.limit.replace(/\D/g, ''))) * 100)}%` }}
                   />
                 </div>
@@ -77,7 +77,7 @@ export function TabPanelEmployee() {
                 key={i}
                 className="flex items-center gap-1 rounded-md border border-gray-200 bg-gray-50 px-2 py-1"
               >
-                <span className="text-[color:var(--color-brand)]">{p.icon}</span>
+                <span className="text-brand">{p.icon}</span>
                 <span className="text-[10px] font-medium text-gray-700">{p.name}</span>
               </div>
             ))}

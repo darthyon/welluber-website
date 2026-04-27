@@ -72,10 +72,10 @@ export function FAQSection() {
     <section id="faq" className="bg-gray-50 py-16 sm:py-20 lg:py-24 scroll-mt-24">
       <Container className="max-w-[720px]">
         <BlurFade inView delay={0.1}>
-          <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-brand)]">
+          <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">
             QUESTIONS
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
+          <h2 className="mt-3 font-poppins text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
             Before you call us, read this.
           </h2>
         </BlurFade>
@@ -84,7 +84,7 @@ export function FAQSection() {
           {faqGroups.map((group, gi) => (
             <BlurFade key={gi} inView delay={0.15 + gi * 0.05}>
               <div>
-                <p className="mb-3 font-[family-name:var(--font-inter)] text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-500 sm:mb-4">
+                <p className="mb-3 font-geist text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-500 sm:mb-4">
                   {group.audience}
                 </p>
                 <Accordion
@@ -96,11 +96,11 @@ export function FAQSection() {
                     const itemKey = `group-${gi}-item-${i}`
                     return (
                       <AccordionItem key={itemKey} value={itemKey}>
-                        <AccordionTrigger className="font-[family-name:var(--font-inter)] text-[15px] font-medium text-gray-900">
+                        <AccordionTrigger className="font-geist text-[15px] font-medium text-gray-900">
                           {faq.q}
                         </AccordionTrigger>
                         <AccordionContent>
-                          <p className="font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-500">
+                          <p className="font-geist text-sm leading-relaxed text-gray-500">
                             {faq.a}
                           </p>
                         </AccordionContent>

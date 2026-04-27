@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1200px] px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-center sm:justify-center">
           {/* Links + copyright */}
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-[family-name:var(--font-inter)] text-gray-400 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-geist text-gray-400 text-center">
             <Link href="/privacy-policy/" className="transition-colors duration-150 hover:text-gray-200">
               Privacy Policy
             </Link>

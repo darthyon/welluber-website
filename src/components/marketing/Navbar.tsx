@@ -40,21 +40,21 @@ export function Navbar() {
           <Link
             scroll={false}
             href="/#features"
-            className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+            className="font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
           >
             Solutions
           </Link>
           <Link
             scroll={false}
             href="/#platform"
-            className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+            className="font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
           >
             Platform
           </Link>
           <Link
             scroll={false}
             href="/#faq"
-            className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+            className="font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
           >
             FAQ
           </Link>
@@ -64,7 +64,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setContactOpen(true)}
-            className="hidden rounded-lg bg-[color:var(--color-brand)] px-4 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-colors duration-150 hover:bg-[color:var(--color-brand-dark)] active:scale-[0.98] md:inline-block"
+            className="hidden rounded-lg bg-brand px-4 py-2.5 font-geist text-sm font-medium text-white transition-colors duration-150 hover:bg-brand-dark active:scale-[0.98] md:inline-block"
           >
             Talk to Us
           </button>

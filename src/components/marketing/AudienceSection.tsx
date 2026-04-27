@@ -129,10 +129,10 @@ export function AudienceSection() {
         <span id="audience-sp" className="block scroll-mt-24" />
 
         <BlurFade inView delay={0.1}>
-          <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-brand)]">
+          <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">
             BUILT FOR
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
+          <h2 className="mt-3 font-poppins text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
             Pick your role. See what changes.
           </h2>
         </BlurFade>
@@ -171,9 +171,9 @@ export function AudienceSection() {
                   setTab(nextKey)
                 }}
                 type="button"
-                className={`-mb-px border-b-2 pb-3 px-1 font-[family-name:var(--font-inter)] text-sm transition-colors duration-150 ${
+                className={`-mb-px border-b-2 pb-3 px-1 font-geist text-sm transition-colors duration-150 ${
                   activeTab === key
-                    ? 'border-[color:var(--color-brand)] font-semibold text-gray-900'
+                    ? 'border-brand font-semibold text-gray-900'
                     : 'border-transparent font-medium text-gray-400 hover:text-gray-600'
                 }`}
                 aria-selected={activeTab === key}
@@ -204,10 +204,10 @@ export function AudienceSection() {
           >
             {/* Left — copy */}
             <div className="min-w-0">
-              <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold leading-[1.3] tracking-[-0.04em] text-gray-900 sm:text-[22px]">
+              <h3 className="font-poppins text-xl font-bold leading-[1.3] tracking-[-0.04em] text-gray-900 sm:text-[22px]">
                 {active.title}
               </h3>
-              <p className="mt-4 font-[family-name:var(--font-inter)] text-[15px] leading-relaxed text-gray-500">
+              <p className="mt-4 font-geist text-[15px] leading-relaxed text-gray-500">
                 {active.body}
               </p>
               <ul className="mt-6 space-y-3">
@@ -216,9 +216,9 @@ export function AudienceSection() {
                     <CheckCircle
                       size={16}
                       weight="fill"
-                      className="mt-0.5 shrink-0 text-[color:var(--color-brand)]"
+                      className="mt-0.5 shrink-0 text-brand"
                     />
-                    <span className="font-[family-name:var(--font-inter)] text-sm text-gray-600">
+                    <span className="font-geist text-sm text-gray-600">
                       {bullet}
                     </span>
                   </li>
@@ -232,7 +232,7 @@ export function AudienceSection() {
                     if (active.cta?.reason) setInitialReason(active.cta.reason)
                     setContactOpen(true)
                   }}
-                  className="mt-8 inline-flex items-center gap-1.5 rounded-lg border border-[color:var(--color-brand)] px-5 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-[color:var(--color-brand)] transition-all duration-150 hover:bg-[color:var(--color-brand-faint)]"
+                  className="mt-8 inline-flex items-center gap-1.5 rounded-lg border border-brand px-5 py-2.5 font-geist text-sm font-medium text-brand transition-all duration-150 hover:bg-brand-faint"
                 >
                   {active.cta.label}
                   <ArrowRight size={14} />
@@ -240,7 +240,7 @@ export function AudienceSection() {
               ) : (
                 <button
                   onClick={() => setContactOpen(true)}
-                  className="mt-8 inline-flex items-center gap-1.5 font-[family-name:var(--font-inter)] text-sm font-medium text-[color:var(--color-brand)] transition-colors hover:text-[color:var(--color-brand-dark)]"
+                  className="mt-8 inline-flex items-center gap-1.5 font-geist text-sm font-medium text-brand transition-colors hover:text-brand-dark"
                 >
                   Talk to Us <ArrowRight size={14} />
                 </button>

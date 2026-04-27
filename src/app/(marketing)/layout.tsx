@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Poppins, Inter } from 'next/font/google'
+import { Poppins, Geist } from 'next/font/google'
 import { Navbar } from '@/components/marketing/Navbar'
 import { Footer } from '@/components/marketing/Footer'
 import { ContactModalProvider } from '@/components/marketing/ContactModal'
@@ -11,10 +11,9 @@ const poppins = Poppins({
   display: 'swap',
 })
 
-const inter = Inter({
+const geist = Geist({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-inter',
+  variable: '--font-geist',
   display: 'swap',
 })
 
@@ -24,7 +23,7 @@ type MarketingLayoutProps = {
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
-    <div className={`${poppins.variable} ${inter.variable} font-[family-name:var(--font-inter)]`}>
+    <div className={`${poppins.variable} ${geist.variable} font-geist`}>
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>

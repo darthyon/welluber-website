@@ -44,14 +44,14 @@ function BentoCard({ icon, overline, title, description, visual, featured, delay
             <div className="flex h-6 w-6 items-center justify-center rounded text-brand">
               {icon}
             </div>
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-brand">
+            <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">
               {overline}
             </p>
           </div>
-          <h4 className="mt-1 font-[family-name:var(--font-inter)] text-base font-semibold text-gray-900">
+          <h4 className="mt-1 font-geist text-base font-semibold text-gray-900">
             {title}
           </h4>
-          <p className="mt-1 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-500">
+          <p className="mt-1 font-geist text-sm leading-relaxed text-gray-500">
             {description}
           </p>
         </div>
@@ -65,13 +65,13 @@ export function FeaturesSection() {
     <section id="features" className="bg-white py-16 sm:py-20 lg:py-24 scroll-mt-24">
       <Container>
         <BlurFade inView delay={0.1}>
-          <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-brand">
+          <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">
             Built for Everyone
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
+          <h2 className="mt-3 font-poppins text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
             One platform. Three perspectives.
           </h2>
-          <p className="mt-4 max-w-2xl font-[family-name:var(--font-inter)] text-base text-gray-500">
+          <p className="mt-4 max-w-2xl font-geist text-base text-gray-500">
             HR admins set the rules. Employees spend freely. Providers get paid on time. No spreadsheets, no manual claims, no reconciliation headaches.
           </p>
         </BlurFade>

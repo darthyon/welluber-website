@@ -26,7 +26,7 @@ export function AvatarCircles({
       {avatars.map((avatar, i) => (
         <div
           key={i}
-          className="flex items-center justify-center rounded-full border-2 border-white font-inter font-semibold"
+          className="flex items-center justify-center rounded-full border-2 border-white font-geist font-semibold"
           style={{
             width: size,
             height: size,
@@ -42,7 +42,7 @@ export function AvatarCircles({
       ))}
       {numPeople !== undefined && (
         <div
-          className="flex items-center justify-center rounded-full border-2 border-white bg-gray-200 font-inter font-semibold text-gray-600"
+          className="flex items-center justify-center rounded-full border-2 border-white bg-gray-200 font-geist font-semibold text-gray-600"
           style={{
             width: size,
             height: size,

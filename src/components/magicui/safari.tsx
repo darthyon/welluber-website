@@ -30,7 +30,7 @@ export function Safari({
           <div className="h-2 w-2 rounded-full bg-[#28C840]" />
         </div>
         <div className="mx-auto flex h-5 w-40 items-center justify-center rounded bg-white/10 px-3">
-          <span className="font-inter text-[10px] text-white/60">{url}</span>
+          <span className="font-geist text-[10px] text-white/60">{url}</span>
         </div>
       </div>
       {/* Content */}

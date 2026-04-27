@@ -128,15 +128,15 @@ Best regards`)
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50">
               <CheckCircle size={24} weight="fill" className="text-emerald-500" />
             </div>
-            <h3 className="mt-4 font-[family-name:var(--font-poppins)] text-xl font-bold text-foreground">
+            <h3 className="mt-4 font-poppins text-xl font-bold text-foreground">
               Message sent
             </h3>
-            <p className="mt-2 max-w-xs font-[family-name:var(--font-inter)] text-sm text-muted-foreground">
+            <p className="mt-2 max-w-xs font-geist text-sm text-muted-foreground">
               Thank you. We&apos;ll be in touch within one business day.
             </p>
             <button
               onClick={() => onOpenChange(false)}
-              className="mt-6 rounded-lg bg-[color:var(--color-brand)] px-6 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-colors hover:bg-[color:var(--color-brand-dark)]"
+              className="mt-6 rounded-lg bg-brand px-6 py-2.5 font-geist text-sm font-medium text-white transition-colors hover:bg-brand-dark"
             >
               Close
             </button>
@@ -144,10 +144,10 @@ Best regards`)
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="font-[family-name:var(--font-poppins)] text-xl font-bold tracking-tight text-foreground">
+              <DialogTitle className="font-poppins text-xl font-bold tracking-tight text-foreground">
                 {role === 'employee' ? 'Recommend WellUber' : 'Talk to Us'}
               </DialogTitle>
-              <DialogDescription className="font-[family-name:var(--font-inter)] text-sm text-muted-foreground">
+              <DialogDescription className="font-geist text-sm text-muted-foreground">
                 {role === 'employee'
                   ? 'Send a note to your manager about bringing WellUber to your company.'
                   : "Tell us a little about yourself and we'll be in touch within one business day."}
@@ -156,7 +156,7 @@ Best regards`)
 
             <form onSubmit={handleSubmit} className="mt-4 space-y-4">
               <div className="space-y-1.5">
-                <Label htmlFor="contact-name" className="font-[family-name:var(--font-inter)] text-sm font-medium">
+                <Label htmlFor="contact-name" className="font-geist text-sm font-medium">
                   Full name
                 </Label>
                 <Input
@@ -165,12 +165,12 @@ Best regards`)
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Sarah Lim"
                   required
-                  className="font-[family-name:var(--font-inter)]"
+                  className="font-geist"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <Label htmlFor="contact-email" className="font-[family-name:var(--font-inter)] text-sm font-medium">
+                <Label htmlFor="contact-email" className="font-geist text-sm font-medium">
                   Work email
                 </Label>
                 <Input
@@ -180,12 +180,12 @@ Best regards`)
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="sarah@company.com"
                   required
-                  className="font-[family-name:var(--font-inter)]"
+                  className="font-geist"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <Label htmlFor="contact-phone" className="font-[family-name:var(--font-inter)] text-sm font-medium">
+                <Label htmlFor="contact-phone" className="font-geist text-sm font-medium">
                   Phone number
                 </Label>
                 <Input
@@ -194,12 +194,12 @@ Best regards`)
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="+60 12-345 6789"
-                  className="font-[family-name:var(--font-inter)]"
+                  className="font-geist"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <Label htmlFor="contact-company" className="font-[family-name:var(--font-inter)] text-sm font-medium">
+                <Label htmlFor="contact-company" className="font-geist text-sm font-medium">
                   Company
                 </Label>
                 <Input
@@ -207,16 +207,16 @@ Best regards`)
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
                   placeholder="Acme Sdn Bhd"
-                  className="font-[family-name:var(--font-inter)]"
+                  className="font-geist"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <Label htmlFor="contact-role" className="font-[family-name:var(--font-inter)] text-sm font-medium">
+                <Label htmlFor="contact-role" className="font-geist text-sm font-medium">
                   I am…
                 </Label>
                 <Select value={role} onValueChange={setRole}>
-                  <SelectTrigger id="contact-role" className="font-[family-name:var(--font-inter)]">
+                  <SelectTrigger id="contact-role" className="font-geist">
                     <SelectValue placeholder="Select one" />
                   </SelectTrigger>
                   <SelectContent>
@@ -230,7 +230,7 @@ Best regards`)
               </div>
 
               <div className="space-y-1.5">
-                <Label htmlFor="contact-message" className="font-[family-name:var(--font-inter)] text-sm font-medium">
+                <Label htmlFor="contact-message" className="font-geist text-sm font-medium">
                   {role === 'employee' ? 'Message to your manager' : 'Message'}
                 </Label>
                 <Textarea
@@ -239,14 +239,14 @@ Best regards`)
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder={role === 'employee' ? 'Write your recommendation…' : 'What would you like to know?'}
                   rows={role === 'employee' ? 6 : 4}
-                  className="font-[family-name:var(--font-inter)] resize-none"
+                  className="font-geist resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="mt-2 w-full rounded-lg bg-[color:var(--color-brand)] px-6 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-colors duration-150 hover:bg-[color:var(--color-brand-dark)] active:scale-[0.98] disabled:opacity-60"
+                className="mt-2 w-full rounded-lg bg-brand px-6 py-2.5 font-geist text-sm font-medium text-white transition-colors duration-150 hover:bg-brand-dark active:scale-[0.98] disabled:opacity-60"
               >
                 {status === 'submitting' ? 'Sending…' : role === 'employee' ? 'Send recommendation' : 'Send message'}
               </button>

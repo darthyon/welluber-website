@@ -19,7 +19,7 @@ export function MobileNav() {
   const isHome = pathname === '/' || pathname === ''
 
   const linkClass =
-    'block py-3 font-[family-name:var(--font-inter)] text-base font-medium text-gray-600 transition-colors hover:text-gray-900'
+    'block py-3 font-geist text-base font-medium text-gray-600 transition-colors hover:text-gray-900'
 
   return (
     <Sheet>
@@ -83,7 +83,7 @@ export function MobileNav() {
             <SheetClose asChild>
               <button
                 onClick={() => setContactOpen(true)}
-                className="w-full rounded-lg bg-[color:var(--color-brand)] px-4 py-3 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-colors duration-150 hover:bg-[color:var(--color-brand-dark)] active:scale-[0.98]"
+                className="w-full rounded-lg bg-brand px-4 py-3 font-geist text-sm font-medium text-white transition-colors duration-150 hover:bg-brand-dark active:scale-[0.98]"
               >
                 Talk to Us
               </button>

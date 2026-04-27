@@ -67,8 +67,8 @@ function NotificationRow({ color, icon, title, sub }: NotificationItem) {
         <Icon size={12} className={iconColor} />
       </div>
       <div className="min-w-0">
-        <p className="truncate font-[family-name:var(--font-inter)] text-[12px] font-semibold text-gray-900">{title}</p>
-        <p className="truncate font-[family-name:var(--font-inter)] text-[11px] text-gray-400">{sub}</p>
+        <p className="truncate font-geist text-[12px] font-semibold text-gray-900">{title}</p>
+        <p className="truncate font-geist text-[11px] text-gray-400">{sub}</p>
       </div>
     </div>
   )

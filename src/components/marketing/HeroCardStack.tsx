@@ -124,7 +124,7 @@ function ReceiptCard() {
       <div className="flex h-full flex-col px-6 pt-2">
         {/* Header */}
         <div className="text-center">
-          <div className="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-lg bg-[color:var(--color-brand)]">
+          <div className="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-lg bg-brand">
             <Favicon size={16} className="text-white" />
           </div>
           <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
@@ -201,7 +201,7 @@ function VoucherCard() {
             Voucher
           </p>
         </div>
-        <p className="mt-1 font-[family-name:var(--font-poppins)] text-3xl font-bold">
+        <p className="mt-1 font-poppins text-3xl font-bold">
           RM 100
         </p>
         <p className="mt-0.5 text-[11px] opacity-80">Be Fit Programme</p>
@@ -292,7 +292,7 @@ function PolicyCard() {
         </div>
 
         {/* Plan name — one line, smaller */}
-        <p className="mt-4 font-[family-name:var(--font-poppins)] text-base font-semibold text-white leading-tight">
+        <p className="mt-4 font-poppins text-base font-semibold text-white leading-tight">
           Wellness Policy
         </p>
 

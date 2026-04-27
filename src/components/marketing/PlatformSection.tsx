@@ -130,10 +130,10 @@ export function PlatformSection() {
         {/* Header */}
         <BlurFade inView delay={0.1}>
           <div className="mb-8 text-center sm:mb-10 lg:mb-12">
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-brand)]">
+            <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">
               The Platform
             </p>
-            <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
+            <h2 className="mt-3 font-poppins text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
               One wallet. Three sides. No paperwork in between.
             </h2>
           </div>
@@ -196,7 +196,7 @@ export function PlatformSection() {
                 />
                 <div
                   ref={centerRef}
-                  className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-[color:var(--color-brand)] shadow-lg"
+                  className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand shadow-lg"
                 >
                   <img
                     src="/favicon-white.svg"
@@ -232,13 +232,13 @@ export function PlatformSection() {
                     <div
                       className={`flex h-8 w-8 items-center justify-center rounded-lg transition-colors duration-200 ${
                         activePersona === persona.key
-                          ? 'bg-[color:var(--color-brand)]/10 text-[color:var(--color-brand)]'
-                          : 'bg-[color:var(--color-brand-faint)] text-[color:var(--color-brand)]'
+                          ? 'bg-brand/10 text-brand'
+                          : 'bg-brand-faint text-brand'
                       }`}
                     >
                       {persona.icon}
                     </div>
-                    <p className="font-[family-name:var(--font-poppins)] text-sm font-bold text-gray-900 sm:text-base">
+                    <p className="font-poppins text-sm font-bold text-gray-900 sm:text-base">
                       {persona.label}
                     </p>
                   </div>
@@ -282,10 +282,10 @@ export function PlatformSection() {
             >
               {/* Left — copy */}
               <div className="flex min-w-0 flex-col items-start lg:h-[300px]">
-                <h3 className="font-[family-name:var(--font-poppins)] text-lg font-bold leading-[1.3] tracking-[-0.04em] text-gray-900 sm:text-xl">
+                <h3 className="font-poppins text-lg font-bold leading-[1.3] tracking-[-0.04em] text-gray-900 sm:text-xl">
                   {activeData.title}
                 </h3>
-                <p className="mt-3 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-500 sm:text-[15px]">
+                <p className="mt-3 font-geist text-sm leading-relaxed text-gray-500 sm:text-[15px]">
                   {activeData.body}
                 </p>
                 <ul className="mt-4 space-y-2">
@@ -294,9 +294,9 @@ export function PlatformSection() {
                       <CheckCircle
                         size={14}
                         weight="fill"
-                        className="mt-0.5 shrink-0 text-[color:var(--color-brand)]"
+                        className="mt-0.5 shrink-0 text-brand"
                       />
-                      <span className="font-[family-name:var(--font-inter)] text-sm text-gray-600">
+                      <span className="font-geist text-sm text-gray-600">
                         {bullet}
                       </span>
                     </li>
@@ -309,7 +309,7 @@ export function PlatformSection() {
                       if (activeData.cta?.reason) setInitialReason(activeData.cta.reason)
                       setContactOpen(true)
                     }}
-                    className="mt-auto inline-flex items-center gap-1.5 rounded-lg border border-[color:var(--color-brand)] px-5 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-[color:var(--color-brand)] transition-all duration-150 hover:bg-[color:var(--color-brand-faint)]"
+                    className="mt-auto inline-flex items-center gap-1.5 rounded-lg border border-brand px-5 py-2.5 font-geist text-sm font-medium text-brand transition-all duration-150 hover:bg-brand-faint"
                   >
                     {activeData.cta.label}
                     <ArrowRight size={14} />

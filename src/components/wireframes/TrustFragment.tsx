@@ -21,7 +21,7 @@ export function TrustFragment() {
               className="flex items-center gap-2.5 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2"
             >
               <Icon size={12} weight={weight} className={`shrink-0 ${iconColor}`} />
-              <span className="font-[family-name:var(--font-inter)] text-[12px] font-medium text-gray-700">
+              <span className="font-geist text-[12px] font-medium text-gray-700">
                 {label}
               </span>
             </div>

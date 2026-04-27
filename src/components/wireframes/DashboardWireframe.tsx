@@ -80,7 +80,7 @@ export function DashboardWireframe() {
             <div className="mt-1.5 flex justify-between">
               {['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'].map(
                 (m) => (
-                  <span key={m} className="font-inter text-[8px] text-gray-400">
+                  <span key={m} className="font-geist text-[8px] text-gray-400">
                     {m}
                   </span>
                 )
@@ -96,7 +96,7 @@ export function DashboardWireframe() {
                 <div className="h-2 w-16 rounded bg-gray-200" />
               </div>
               <div className="mb-1 h-2 w-20 rounded bg-gray-200" />
-              <div className="mt-3 font-inter text-base font-semibold text-gray-900">
+              <div className="mt-3 font-geist text-base font-semibold text-gray-900">
                 RM 18.2M
               </div>
               <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-gray-200">
@@ -104,7 +104,7 @@ export function DashboardWireframe() {
               </div>
             </div>
             <div className="mt-3 flex w-full items-center justify-center rounded bg-brand px-2 py-1.5">
-              <span className="font-inter text-[9px] font-medium text-white">
+              <span className="font-geist text-[9px] font-medium text-white">
                 Trigger Payout →
               </span>
             </div>

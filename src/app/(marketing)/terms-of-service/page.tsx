@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mt-10 font-[family-name:var(--font-poppins)] text-xl font-bold tracking-[-0.03em] text-gray-900 sm:text-2xl">
+    <h2 className="mt-10 font-poppins text-xl font-bold tracking-[-0.03em] text-gray-900 sm:text-2xl">
       {children}
     </h2>
   )
@@ -11,7 +11,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function SubTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="mt-6 font-[family-name:var(--font-poppins)] text-base font-semibold text-gray-900">
+    <h3 className="mt-6 font-poppins text-base font-semibold text-gray-900">
       {children}
     </h3>
   )
@@ -19,7 +19,7 @@ function SubTitle({ children }: { children: React.ReactNode }) {
 
 function BodyP({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mt-4 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-600">
+    <p className="mt-4 font-geist text-sm leading-relaxed text-gray-600">
       {children}
     </p>
   )
@@ -27,7 +27,7 @@ function BodyP({ children }: { children: React.ReactNode }) {
 
 function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="mt-4 list-disc space-y-2 pl-5 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-600">
+    <ul className="mt-4 list-disc space-y-2 pl-5 font-geist text-sm leading-relaxed text-gray-600">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -41,20 +41,20 @@ export default function TermsOfServicePage() {
       <Container className="max-w-[720px]">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+          className="inline-flex items-center gap-2 font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
         >
           <span aria-hidden="true">←</span>
           Back to home
         </Link>
 
-        <p className="mt-8 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-gray-400">
+        <p className="mt-8 font-geist text-xs font-semibold uppercase tracking-[0.08em] text-gray-400">
           LEGAL
         </p>
-        <h1 className="mt-3 font-[family-name:var(--font-poppins)] text-3xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-4xl">
+        <h1 className="mt-3 font-poppins text-3xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-4xl">
           Terms and Conditions
         </h1>
 
-        <p className="mt-4 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-600">
+        <p className="mt-4 font-geist text-sm leading-relaxed text-gray-600">
           <span className="font-semibold text-gray-900">Welluber Sdn Bhd</span>
           <br />
           Last updated: April 2026
@@ -344,7 +344,7 @@ export default function TermsOfServicePage() {
           Email: <span className="font-semibold text-gray-900">contact@welluber.com</span>
         </BodyP>
 
-        <p className="mt-10 font-[family-name:var(--font-inter)] text-xs leading-relaxed text-gray-500">
+        <p className="mt-10 font-geist text-xs leading-relaxed text-gray-500">
           <em>
             These Terms and Conditions are governed by the laws of Malaysia. Disputes are subject to the exclusive jurisdiction of the
             courts of Kuala Lumpur.

@@ -45,8 +45,8 @@ function CategoryPill({
 }) {
   return (
     <div className="flex items-center gap-2.5 rounded-full border border-gray-200 bg-white px-4 py-2 shadow-sm sm:px-5 sm:py-2.5">
-      <Icon size={14} className="text-[color:var(--color-brand)]" />
-      <span className="font-[family-name:var(--font-inter)] text-xs text-gray-600 sm:text-sm">
+      <Icon size={14} className="text-brand" />
+      <span className="font-geist text-xs text-gray-600 sm:text-sm">
         {label}
       </span>
     </div>

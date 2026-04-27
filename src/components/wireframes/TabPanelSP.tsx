@@ -30,7 +30,7 @@ export function TabPanelSP() {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-[color:var(--color-brand)]">
+            <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-brand">
               <svg width="12" height="12" viewBox="0 0 512 512" fill="none" className="text-white">
                 <path d="M217 39C217 17.46 234.46 0 256 0C277.54 0 295 17.46 295 39V157C295 178.54 277.54 196 256 196C234.46 196 217 178.54 217 157V39Z" fill="currentColor"/>
                 <path d="M472 217C493.54 217 511 234.46 511 256C511 277.54 493.54 295 472 295H354C332.46 295 315 277.54 315 256C315 234.46 332.46 217 354 217H472Z" fill="currentColor"/>
@@ -53,7 +53,7 @@ export function TabPanelSP() {
 
         {/* Total */}
         <div className="mt-3 flex items-baseline gap-1">
-          <span className="font-[family-name:var(--font-poppins)] text-xl font-bold text-gray-900">
+          <span className="font-poppins text-xl font-bold text-gray-900">
             RM {totalPaid.toLocaleString()}
           </span>
           <span className="text-[11px] text-gray-400">received this month</span>

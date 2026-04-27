@@ -36,7 +36,7 @@ const retentionRows: RetentionRow[] = [
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mt-10 font-[family-name:var(--font-poppins)] text-xl font-bold tracking-[-0.03em] text-gray-900 sm:text-2xl">
+    <h2 className="mt-10 font-poppins text-xl font-bold tracking-[-0.03em] text-gray-900 sm:text-2xl">
       {children}
     </h2>
   )
@@ -44,7 +44,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function SubTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="mt-6 font-[family-name:var(--font-poppins)] text-base font-semibold text-gray-900">
+    <h3 className="mt-6 font-poppins text-base font-semibold text-gray-900">
       {children}
     </h3>
   )
@@ -52,7 +52,7 @@ function SubTitle({ children }: { children: React.ReactNode }) {
 
 function BodyP({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mt-4 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-600">
+    <p className="mt-4 font-geist text-sm leading-relaxed text-gray-600">
       {children}
     </p>
   )
@@ -60,7 +60,7 @@ function BodyP({ children }: { children: React.ReactNode }) {
 
 function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="mt-4 list-disc space-y-2 pl-5 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-600">
+    <ul className="mt-4 list-disc space-y-2 pl-5 font-geist text-sm leading-relaxed text-gray-600">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -74,20 +74,20 @@ export default function PrivacyPolicyPage() {
       <Container className="max-w-[720px]">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+          className="inline-flex items-center gap-2 font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
         >
           <span aria-hidden="true">←</span>
           Back to home
         </Link>
 
-        <p className="mt-8 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-gray-400">
+        <p className="mt-8 font-geist text-xs font-semibold uppercase tracking-[0.08em] text-gray-400">
           LEGAL
         </p>
-        <h1 className="mt-3 font-[family-name:var(--font-poppins)] text-3xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-4xl">
+        <h1 className="mt-3 font-poppins text-3xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-4xl">
           Privacy Policy
         </h1>
 
-        <p className="mt-4 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-600">
+        <p className="mt-4 font-geist text-sm leading-relaxed text-gray-600">
           <span className="font-semibold text-gray-900">Welluber Sdn Bhd</span>
           <br />
           Last updated: April 2026
@@ -154,10 +154,10 @@ export default function PrivacyPolicyPage() {
           <table className="w-full border-collapse text-left">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-4 py-3 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-gray-600">
+                <th className="px-4 py-3 font-geist text-xs font-semibold uppercase tracking-[0.08em] text-gray-600">
                   Purpose
                 </th>
-                <th className="px-4 py-3 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-gray-600">
+                <th className="px-4 py-3 font-geist text-xs font-semibold uppercase tracking-[0.08em] text-gray-600">
                   Legal Basis (PDPA)
                 </th>
               </tr>
@@ -165,10 +165,10 @@ export default function PrivacyPolicyPage() {
             <tbody>
               {purposeRows.map((row) => (
                 <tr key={row.purpose} className="border-t border-gray-200">
-                  <td className="px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-gray-700">
+                  <td className="px-4 py-3 font-geist text-sm text-gray-700">
                     {row.purpose}
                   </td>
-                  <td className="px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-gray-700">
+                  <td className="px-4 py-3 font-geist text-sm text-gray-700">
                     {row.basis}
                   </td>
                 </tr>
@@ -222,10 +222,10 @@ export default function PrivacyPolicyPage() {
           <table className="w-full border-collapse text-left">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-4 py-3 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-gray-600">
+                <th className="px-4 py-3 font-geist text-xs font-semibold uppercase tracking-[0.08em] text-gray-600">
                   Data Type
                 </th>
-                <th className="px-4 py-3 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-gray-600">
+                <th className="px-4 py-3 font-geist text-xs font-semibold uppercase tracking-[0.08em] text-gray-600">
                   Retention Period
                 </th>
               </tr>
@@ -233,10 +233,10 @@ export default function PrivacyPolicyPage() {
             <tbody>
               {retentionRows.map((row) => (
                 <tr key={row.dataType} className="border-t border-gray-200">
-                  <td className="px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-gray-700">
+                  <td className="px-4 py-3 font-geist text-sm text-gray-700">
                     {row.dataType}
                   </td>
-                  <td className="px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-gray-700">
+                  <td className="px-4 py-3 font-geist text-sm text-gray-700">
                     {row.retention}
                   </td>
                 </tr>
@@ -305,7 +305,7 @@ export default function PrivacyPolicyPage() {
           Email: <span className="font-semibold text-gray-900">contact@welluber.com</span>
         </BodyP>
 
-        <p className="mt-10 font-[family-name:var(--font-inter)] text-xs leading-relaxed text-gray-500">
+        <p className="mt-10 font-geist text-xs leading-relaxed text-gray-500">
           <em>
             This Privacy Policy is governed by the laws of Malaysia. Any disputes arising from this policy shall be subject to the
             exclusive jurisdiction of the courts of Kuala Lumpur.
