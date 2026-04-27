@@ -76,7 +76,7 @@ export function NetworkSection() {
         {/* Beam diagram */}
         <div
           ref={containerRef}
-          className="relative mx-auto flex h-[380px] max-w-[900px] items-center justify-center px-2 sm:h-[420px] sm:px-4 md:h-[460px]"
+          className="relative mx-auto flex min-h-[300px] max-w-[900px] items-center justify-center px-2 sm:min-h-[360px] sm:px-4 md:min-h-[420px]"
         >
           {/* Beams rendered first — sit behind cards via z-0 */}
           {isInView && !reduceMotion ? (
@@ -190,9 +190,9 @@ export function NetworkSection() {
               className="relative z-10 flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-[color:var(--color-brand)] shadow-lg"
             >
               <img
-                src="/img_logo_white.svg"
+                src="/img_logomark.svg"
                 alt="Welluber"
-                className="h-10 w-10 object-contain"
+                className="h-10 w-10 object-contain brightness-0 invert"
                 draggable={false}
               />
             </div>

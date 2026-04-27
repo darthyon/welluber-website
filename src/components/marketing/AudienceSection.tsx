@@ -8,6 +8,7 @@ import { TabPanelHR } from '@/components/wireframes/TabPanelHR'
 import { TabPanelEmployee } from '@/components/wireframes/TabPanelEmployee'
 import { TabPanelSP } from '@/components/wireframes/TabPanelSP'
 import { Container } from '@/components/shared/Container'
+import { useContactModal } from './ContactModal'
 
 type TabKey = 'hr' | 'employee' | 'sp'
 
@@ -19,7 +20,7 @@ const tabs: Record<
     title: string
     body: string
     bullets: string[]
-    cta?: { label: string; href: string }
+    cta?: { label: string; reason?: string }
     visual: React.ReactNode
   }
 > = {
@@ -59,7 +60,7 @@ const tabs: Record<
     ],
     cta: {
       label: 'Apply as a provider',
-      href: 'mailto:contact@welluber.com?subject=SP%20Application',
+      reason: 'provider',
     },
     visual: <TabPanelSP />,
   },
@@ -76,6 +77,7 @@ const hashToTab: Record<string, TabKey> = {
 export function AudienceSection() {
   const [activeTab, setActiveTab] = useState<TabKey>('hr')
   const active = tabs[activeTab]
+  const { setOpen: setContactOpen, setInitialReason } = useContactModal()
   const activeTabRef = useRef<TabKey>('hr')
   const tabRefs = useRef<Record<TabKey, HTMLButtonElement | null>>({
     hr: null,
@@ -225,20 +227,23 @@ export function AudienceSection() {
 
               {/* Per-tab CTA */}
               {active.cta ? (
-                <a
-                  href={active.cta.href}
+                <button
+                  onClick={() => {
+                    if (active.cta?.reason) setInitialReason(active.cta.reason)
+                    setContactOpen(true)
+                  }}
                   className="mt-8 inline-flex items-center gap-1.5 rounded-lg border border-[color:var(--color-brand)] px-5 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-[color:var(--color-brand)] transition-all duration-150 hover:bg-[color:var(--color-brand-faint)]"
                 >
                   {active.cta.label}
                   <ArrowRight size={14} />
-                </a>
+                </button>
               ) : (
-                <a
-                  href="mailto:contact@welluber.com"
+                <button
+                  onClick={() => setContactOpen(true)}
                   className="mt-8 inline-flex items-center gap-1.5 font-[family-name:var(--font-inter)] text-sm font-medium text-[color:var(--color-brand)] transition-colors hover:text-[color:var(--color-brand-dark)]"
                 >
                   Talk to Us <ArrowRight size={14} />
-                </a>
+                </button>
               )}
             </div>
 

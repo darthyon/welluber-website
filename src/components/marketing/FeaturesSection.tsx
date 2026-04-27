@@ -36,7 +36,7 @@ function BentoCard({ icon, overline, title, description, visual, featured, delay
         <div className="relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white p-6 transition-all duration-150 hover:-translate-y-0.5 hover:border-brand hover:shadow-[0_8px_24px_rgba(67,56,202,0.08)] sm:p-7">
           {featured && <BorderBeam colorFrom="var(--color-brand)" colorTo="var(--color-brand-mid)" duration={8} />}
           {/* Visual area — grows to fill available space */}
-          <div className="h-[240px] overflow-hidden rounded-lg border border-gray-100 bg-gray-50 sm:h-auto sm:min-h-0 sm:flex-1">
+          <div className="min-h-[160px] overflow-hidden rounded-lg border border-gray-100 bg-gray-50 sm:min-h-[200px] sm:h-auto sm:flex-1">
             {visual}
           </div>
           {/* Icon + overline row */}

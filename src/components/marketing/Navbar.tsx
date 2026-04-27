@@ -18,8 +18,6 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const isHome = pathname === '/' || pathname === ''
-
   return (
     <header
       className={`sticky top-0 z-50 h-[60px] bg-white/90 backdrop-blur-md transition-shadow duration-150 ${
@@ -39,49 +37,27 @@ export function Navbar() {
 
         {/* Nav links — hidden below md */}
         <nav className="hidden items-center gap-6 md:flex lg:gap-8">
-          {isHome ? (
-            <>
-              <a
-                href="#features"
-                className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
-              >
-                Solutions
-              </a>
-              <a
-                href="#audience-hr"
-                className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
-              >
-                For HR
-              </a>
-              <a
-                href="#audience-sp"
-                className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
-              >
-                For Providers
-              </a>
-            </>
-          ) : (
-            <>
-              <Link
-                href="/#features"
-                className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
-              >
-                Solutions
-              </Link>
-              <Link
-                href="/#audience-hr"
-                className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
-              >
-                For HR
-              </Link>
-              <Link
-                href="/#audience-sp"
-                className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
-              >
-                For Providers
-              </Link>
-            </>
-          )}
+          <Link
+            scroll={false}
+            href="/#features"
+            className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+          >
+            Solutions
+          </Link>
+          <Link
+            scroll={false}
+            href="/#audience-hr"
+            className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+          >
+            For HR
+          </Link>
+          <Link
+            scroll={false}
+            href="/#audience-sp"
+            className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+          >
+            For Providers
+          </Link>
         </nav>
 
         {/* Desktop CTA + Mobile menu */}

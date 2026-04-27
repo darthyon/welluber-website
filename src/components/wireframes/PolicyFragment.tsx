@@ -47,7 +47,7 @@ export function PolicyFragment() {
 
       {/* Center node */}
       <div className="absolute left-1/2 top-1/2 z-10 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[1.5px] border-brand-mid bg-white">
-        <Image src="/img_logo.svg" alt="Welluber" width={22} height={22} />
+        <Image src="/img_logomark.svg" alt="Welluber" width={22} height={22} />
       </div>
     </div>
   )

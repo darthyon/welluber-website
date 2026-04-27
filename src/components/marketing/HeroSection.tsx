@@ -102,7 +102,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="absolute -bottom-4 left-0 z-10 rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-lg sm:-left-6 md:-left-8"
+              className="absolute -bottom-4 left-0 z-10 hidden rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-lg sm:-left-6 sm:block md:-left-8"
             >
               <p className="font-[family-name:var(--font-inter)] text-[10px] font-medium uppercase tracking-wide text-gray-400">
                 Platform capacity
@@ -118,7 +118,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="absolute -top-4 right-0 z-10 rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-lg sm:-right-6 md:-right-8"
+              className="absolute -top-4 right-0 z-10 hidden rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-lg sm:-right-6 sm:block md:-right-8"
             >
               <p className="font-[family-name:var(--font-inter)] text-[10px] font-medium uppercase tracking-wide text-gray-400">
                 Platform capacity
