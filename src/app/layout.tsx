@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Welluber — Corporate Wellness Benefits',
   description: 'One platform for HR teams to set policies, employees to spend, and service providers to get paid.',
   icons: {
-    icon: [{ url: '/favicon.svg' }, { url: '/img_logo.svg' }],
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/favicon-180x180.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 }
 
