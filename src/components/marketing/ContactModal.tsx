@@ -94,6 +94,15 @@ function ContactModalDialog({
   useEffect(() => {
     if (open && initialReason) {
       setRole(initialReason)
+      if (initialReason === 'employee') {
+        setMessage(`Hi [Boss's Name],
+
+I came across WellUber — a flexi benefit platform that lets employees spend on fitness, wellness, and lifestyle with a digital wallet. No reimbursements, no paperwork.
+
+I think it could be a great addition to our benefits package. Would you be open to exploring it?
+
+Best regards`)
+      }
     }
   }, [open, initialReason])
 
@@ -119,7 +128,7 @@ function ContactModalDialog({
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50">
               <CheckCircle size={24} weight="fill" className="text-emerald-500" />
             </div>
-            <h3 className="mt-4 font-[family-name:var(--font-bricolage)] text-xl font-bold text-foreground">
+            <h3 className="mt-4 font-[family-name:var(--font-poppins)] text-xl font-bold text-foreground">
               Message sent
             </h3>
             <p className="mt-2 max-w-xs font-[family-name:var(--font-inter)] text-sm text-muted-foreground">
@@ -135,11 +144,13 @@ function ContactModalDialog({
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="font-[family-name:var(--font-bricolage)] text-xl font-bold tracking-tight text-foreground">
-                Talk to Us
+              <DialogTitle className="font-[family-name:var(--font-poppins)] text-xl font-bold tracking-tight text-foreground">
+                {role === 'employee' ? 'Recommend WellUber' : 'Talk to Us'}
               </DialogTitle>
               <DialogDescription className="font-[family-name:var(--font-inter)] text-sm text-muted-foreground">
-                Tell us a little about yourself and we&apos;ll be in touch within one business day.
+                {role === 'employee'
+                  ? 'Send a note to your manager about bringing WellUber to your company.'
+                  : "Tell us a little about yourself and we'll be in touch within one business day."}
               </DialogDescription>
             </DialogHeader>
 
@@ -210,6 +221,7 @@ function ContactModalDialog({
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="hr">An HR / Benefits leader</SelectItem>
+                    <SelectItem value="employee">An employee</SelectItem>
                     <SelectItem value="provider">A wellness provider</SelectItem>
                     <SelectItem value="broker">A broker / consultant</SelectItem>
                     <SelectItem value="other">Something else</SelectItem>
@@ -219,14 +231,14 @@ function ContactModalDialog({
 
               <div className="space-y-1.5">
                 <Label htmlFor="contact-message" className="font-[family-name:var(--font-inter)] text-sm font-medium">
-                  Message
+                  {role === 'employee' ? 'Message to your manager' : 'Message'}
                 </Label>
                 <Textarea
                   id="contact-message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="What would you like to know?"
-                  rows={4}
+                  placeholder={role === 'employee' ? 'Write your recommendation…' : 'What would you like to know?'}
+                  rows={role === 'employee' ? 6 : 4}
                   className="font-[family-name:var(--font-inter)] resize-none"
                 />
               </div>
@@ -236,7 +248,7 @@ function ContactModalDialog({
                 disabled={status === 'submitting'}
                 className="mt-2 w-full rounded-lg bg-[color:var(--color-brand)] px-6 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-colors duration-150 hover:bg-[color:var(--color-brand-dark)] active:scale-[0.98] disabled:opacity-60"
               >
-                {status === 'submitting' ? 'Sending…' : 'Send message'}
+                {status === 'submitting' ? 'Sending…' : role === 'employee' ? 'Send recommendation' : 'Send message'}
               </button>
             </form>
           </>

@@ -66,19 +66,19 @@ export function FeaturesSection() {
       <Container>
         <BlurFade inView delay={0.1}>
           <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-brand">
-            PLATFORM
+            Built for Everyone
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-bricolage)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
-            Everything in one place. Finally.
+          <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
+            One platform. Three perspectives.
           </h2>
-          <p className="mt-4 font-[family-name:var(--font-inter)] text-base text-gray-500">
-            No spreadsheets. No manual claims. No reconciliation headaches.
+          <p className="mt-4 max-w-2xl font-[family-name:var(--font-inter)] text-base text-gray-500">
+            HR admins set the rules. Employees spend freely. Providers get paid on time. No spreadsheets, no manual claims, no reconciliation headaches.
           </p>
         </BlurFade>
 
         {/* Bento grid — responsive named areas */}
         <div
-          className="mt-10 grid gap-4 sm:mt-12 sm:[grid-template-columns:minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] sm:[grid-template-rows:320px_320px_320px] sm:[grid-template-areas:'policy_policy_settlement''wallet_analytics_settlement''org_org_compliance']"
+          className="mt-10 grid gap-4 sm:mt-12 sm:[grid-template-columns:minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] sm:[grid-template-rows:minmax(320px,auto)_minmax(320px,auto)_minmax(320px,auto)] sm:[grid-template-areas:'policy_policy_settlement''wallet_analytics_settlement''org_org_compliance']"
         >
           {/* Policy — first cell, spans 2 cols on desktop via named area */}
           <div className="sm:[grid-area:policy]">

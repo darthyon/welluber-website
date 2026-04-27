@@ -39,7 +39,7 @@
   --color-dark-muted: var(--dark-muted);
 
   /* Fonts */
-  --font-bricolage: var(--font-bricolage);
+  --font-poppins: var(--font-poppins);
   --font-inter: var(--font-inter);
 
   /* Animations */
@@ -172,5 +172,12 @@
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+
+  /* Explicitly pause infinite scroll marquees instead of letting them jitter at 0.01ms */
+  [class*="animate-marquee"],
+  [style*="animation: marquee"],
+  [style*="animation:marquee"] {
+    animation-play-state: paused !important;
   }
 }

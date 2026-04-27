@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mt-10 font-[family-name:var(--font-bricolage)] text-xl font-bold tracking-[-0.03em] text-gray-900 sm:text-2xl">
+    <h2 className="mt-10 font-[family-name:var(--font-poppins)] text-xl font-bold tracking-[-0.03em] text-gray-900 sm:text-2xl">
       {children}
     </h2>
   )
@@ -11,7 +11,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function SubTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="mt-6 font-[family-name:var(--font-bricolage)] text-base font-semibold text-gray-900">
+    <h3 className="mt-6 font-[family-name:var(--font-poppins)] text-base font-semibold text-gray-900">
       {children}
     </h3>
   )
@@ -50,7 +50,7 @@ export default function TermsOfServicePage() {
         <p className="mt-8 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-gray-400">
           LEGAL
         </p>
-        <h1 className="mt-3 font-[family-name:var(--font-bricolage)] text-3xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-4xl">
+        <h1 className="mt-3 font-[family-name:var(--font-poppins)] text-3xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-4xl">
           Terms and Conditions
         </h1>
 

@@ -46,17 +46,17 @@ export function Navbar() {
           </Link>
           <Link
             scroll={false}
-            href="/#audience-hr"
+            href="/#platform"
             className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
           >
-            For HR
+            Platform
           </Link>
           <Link
             scroll={false}
-            href="/#audience-sp"
+            href="/#faq"
             className="font-[family-name:var(--font-inter)] text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
           >
-            For Providers
+            FAQ
           </Link>
         </nav>
 

@@ -132,7 +132,7 @@ export function AudienceSection() {
           <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-brand)]">
             BUILT FOR
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-bricolage)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
+          <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
             Pick your role. See what changes.
           </h2>
         </BlurFade>
@@ -204,7 +204,7 @@ export function AudienceSection() {
           >
             {/* Left — copy */}
             <div className="min-w-0">
-              <h3 className="font-[family-name:var(--font-bricolage)] text-xl font-bold leading-[1.3] tracking-[-0.04em] text-gray-900 sm:text-[22px]">
+              <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold leading-[1.3] tracking-[-0.04em] text-gray-900 sm:text-[22px]">
                 {active.title}
               </h3>
               <p className="mt-4 font-[family-name:var(--font-inter)] text-[15px] leading-relaxed text-gray-500">

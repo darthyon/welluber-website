@@ -27,7 +27,7 @@ function PersonaCard({ nodeRef, icon, role, description, photo, photoAlt }: Pers
           {icon}
         </div>
         <div>
-          <p className="font-[family-name:var(--font-bricolage)] text-base font-bold text-gray-900">
+          <p className="font-[family-name:var(--font-poppins)] text-base font-bold text-gray-900">
             {role}
           </p>
           <p className="mt-1.5 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-gray-500">
@@ -74,14 +74,14 @@ export function NetworkSection() {
   }, [])
 
   return (
-    <section className="bg-gray-50 py-16 sm:py-20 lg:py-24">
+    <section id="network" className="bg-gray-50 py-16 sm:py-20 lg:py-24 scroll-mt-24">
       <Container>
         <BlurFade inView delay={0.1}>
           <div className="mb-10 text-center sm:mb-12 lg:mb-16">
             <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-brand)]">
               THE PLATFORM
             </p>
-            <h2 className="mt-3 font-[family-name:var(--font-bricolage)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
+            <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
               One wallet. Three sides. No paperwork in between.
             </h2>
             <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-inter)] text-base text-gray-500">
@@ -105,7 +105,7 @@ export function NetworkSection() {
               nodeRef={employeeRef}
               icon={<UserCircle size={22} weight="regular" />}
               role="Employees"
-              description="Easy access to benefits that support everyday well-being."
+              description="Browse and redeem benefits that support everyday well-being."
               photo="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
               photoAlt="Employee browsing benefits on phone"
             />

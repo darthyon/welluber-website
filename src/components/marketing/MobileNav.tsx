@@ -36,7 +36,7 @@ export function MobileNav() {
         </SheetHeader>
 
         <div className="flex h-full flex-col">
-          {/* Close button row — positioned top-right by default in Sheet, so just add top padding */}
+          {/* Close button row — positioned top-right by default in Sheet; add top padding to clear it */}
           <nav className="flex-1 px-6 pt-14">
             <div className="flex flex-col">
               {isHome ? (
@@ -47,13 +47,13 @@ export function MobileNav() {
                     </a>
                   </SheetClose>
                   <SheetClose asChild>
-                    <a href="#audience-hr" className={linkClass}>
-                      For HR
+                    <a href="#platform" className={linkClass}>
+                      Platform
                     </a>
                   </SheetClose>
                   <SheetClose asChild>
-                    <a href="#audience-sp" className={linkClass}>
-                      For Providers
+                    <a href="#faq" className={linkClass}>
+                      FAQ
                     </a>
                   </SheetClose>
                 </>
@@ -65,13 +65,13 @@ export function MobileNav() {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link href="/#audience-hr" className={linkClass}>
-                      For HR
+                    <Link href="/#platform" className={linkClass}>
+                      Platform
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link href="/#audience-sp" className={linkClass}>
-                      For Providers
+                    <Link href="/#faq" className={linkClass}>
+                      FAQ
                     </Link>
                   </SheetClose>
                 </>

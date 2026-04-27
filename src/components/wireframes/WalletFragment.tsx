@@ -1,21 +1,52 @@
 export function WalletFragment() {
   return (
-    <div className="flex h-full flex-col justify-center px-4 py-3">
-      <span className="font-inter text-[10px] text-gray-400">Available Balance</span>
-      <span className="mt-1 font-inter text-2xl font-semibold text-gray-900">
-        RM 2,450<span className="text-base text-gray-400">.00</span>
-      </span>
-      <div className="mt-3 space-y-1">
-        <div className="flex justify-between">
-          <span className="font-inter text-[9px] text-gray-400">Spent this month</span>
-          <span className="font-inter text-[9px] font-medium text-gray-900">RM 1,550</span>
+    <div className="flex h-full flex-col px-4 py-4">
+      {/* Available Balance */}
+      <div>
+        <span className="font-[family-name:var(--font-inter)] text-[10px] text-gray-400">Available Balance</span>
+        <div className="mt-2 flex items-baseline gap-2">
+          <div className="h-8 w-32 rounded-md bg-gray-200" />
+          <div className="h-4 w-10 rounded bg-gray-100" />
         </div>
-        <div className="h-1.5 w-full overflow-hidden rounded-full bg-brand-faint">
-          <div className="h-full w-[60%] rounded-full bg-brand" />
+      </div>
+
+      {/* Utilisation breakdown */}
+      <div className="mt-5 space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="font-[family-name:var(--font-inter)] text-[10px] text-gray-400">Budget utilisation</span>
+          <div className="flex items-center gap-1.5">
+            <div className="h-3 w-10 rounded bg-gray-200" />
+            <span className="font-[family-name:var(--font-inter)] text-[9px] text-gray-400">spent</span>
+          </div>
         </div>
-        <div className="flex justify-between">
-          <span className="font-inter text-[9px] text-gray-400">60% utilised</span>
-          <span className="font-inter text-[9px] text-gray-400">of RM 4,000 allocation</span>
+
+        <div className="h-2.5 w-full overflow-hidden rounded-full bg-gray-100">
+          <div className="h-full w-[60%] rounded-full bg-[color:var(--color-brand)]" />
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="h-2 w-2 rounded-full bg-[color:var(--color-brand)]" />
+            <span className="font-[family-name:var(--font-inter)] text-[9px] text-gray-500">Used</span>
+            <div className="h-3 w-10 rounded bg-gray-200" />
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="h-2 w-2 rounded-full bg-gray-200" />
+            <span className="font-[family-name:var(--font-inter)] text-[9px] text-gray-500">Remaining</span>
+            <div className="h-3 w-10 rounded bg-gray-100" />
+          </div>
+        </div>
+      </div>
+
+      {/* Monthly allocation */}
+      <div className="mt-5 rounded-xl bg-gray-50 p-3">
+        <div className="flex items-center justify-between">
+          <span className="font-[family-name:var(--font-inter)] text-[10px] text-gray-400">Monthly allocation</span>
+          <div className="h-3 w-14 rounded bg-gray-200" />
+        </div>
+        <div className="mt-2 flex items-center gap-2">
+          <div className="h-2 w-2 rounded-full bg-emerald-500" />
+          <span className="font-[family-name:var(--font-inter)] text-[9px] text-gray-500">On track</span>
         </div>
       </div>
     </div>
