@@ -4,6 +4,7 @@ interface SafariProps {
   url?: string
   className?: string
   children?: React.ReactNode
+  overlay?: React.ReactNode
   width?: number
   height?: number
 }
@@ -12,6 +13,7 @@ export function Safari({
   url = 'welluber.com',
   className,
   children,
+  overlay,
 }: SafariProps) {
   return (
     <div
@@ -33,6 +35,7 @@ export function Safari({
       </div>
       {/* Content */}
       <div className="overflow-hidden">{children}</div>
+      {overlay}
     </div>
   )
 }

@@ -46,8 +46,8 @@ export function PolicyFragment() {
       </OrbitingCircles>
 
       {/* Center node */}
-      <div className="absolute left-1/2 top-1/2 z-10 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[1.5px] border-brand-mid bg-white">
-        <Image src="/img_logo.svg" alt="Welluber" width={22} height={22} />
+      <div className="absolute left-1/2 top-1/2 z-10 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[color:var(--color-brand)] shadow-lg">
+        <Image src="/favicon-white.svg" alt="Welluber" width={22} height={22} style={{ width: '22px', height: '22px' }} />
       </div>
     </div>
   )

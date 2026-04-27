@@ -131,7 +131,7 @@ export function AudienceSection() {
             BUILT FOR
           </p>
           <h2 className="mt-3 font-[family-name:var(--font-bricolage)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
-            One platform. Three stakeholders.
+            Pick your role. See what changes.
           </h2>
         </BlurFade>
 
