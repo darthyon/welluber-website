@@ -19,6 +19,9 @@ pnpm-debug.log*
 .vscode/
 .idea/
 
+# Claude worktrees
+.claude/
+
 # misc
 coverage/
 .vercel
