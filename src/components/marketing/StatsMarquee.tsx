@@ -27,10 +27,10 @@ function StatPill({ label, value }: { label: string; value: string }) {
 
 export function StatsMarquee() {
   return (
-    <div className="relative border-y border-gray-100 bg-[#F9FAFB] py-4">
+    <div className="relative border-y border-gray-100 bg-gray-50 py-4">
       {/* Fade masks */}
-      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-[#F9FAFB] to-transparent sm:w-24 md:w-32" />
-      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-[#F9FAFB] to-transparent sm:w-24 md:w-32" />
+      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-gray-50 to-transparent sm:w-24 md:w-32" />
+      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-gray-50 to-transparent sm:w-24 md:w-32" />
 
       <Marquee pauseOnHover className="[--duration:35s] [--gap:0.75rem]">
         {stats.map((s) => (

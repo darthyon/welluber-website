@@ -21,7 +21,7 @@ export function Safari({
       )}
     >
       {/* Browser chrome */}
-      <div className="flex h-7 items-center gap-2 bg-[#1E1B2E] px-3">
+      <div className="flex h-7 items-center gap-2 bg-dark-surface px-3">
         <div className="flex gap-1.5">
           <div className="h-2 w-2 rounded-full bg-[#FF5F57]" />
           <div className="h-2 w-2 rounded-full bg-[#FEBC2E]" />

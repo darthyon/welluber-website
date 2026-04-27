@@ -19,8 +19,8 @@ export function BorderBeam({
   duration = 15,
   anchor = 90,
   borderWidth = 1.5,
-  colorFrom = '#4F46E5',
-  colorTo = '#C7D2FE',
+  colorFrom = 'var(--color-brand)',
+  colorTo = 'var(--color-brand-mid)',
   delay = 0,
 }: BorderBeamProps) {
   return (

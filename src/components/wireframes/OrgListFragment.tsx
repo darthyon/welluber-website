@@ -6,33 +6,33 @@ export function OrgListFragment() {
   ]
 
   const statusColors: Record<string, string> = {
-    Active:    'bg-[#D1FAE5] text-[#065F46]',
-    Pending:   'bg-[#FEF3C7] text-[#92400E]',
-    Suspended: 'bg-[#FEE2E2] text-[#991B1B]',
+    Active:    'bg-emerald-100 text-emerald-800',
+    Pending:   'bg-amber-100 text-amber-800',
+    Suspended: 'bg-red-100 text-red-800',
   }
 
   return (
     <div className="h-full overflow-hidden">
-      <div className="flex items-center border-b border-[#E5E7EB] bg-[#F9FAFB] px-4 py-2">
+      <div className="flex items-center border-b border-gray-200 bg-gray-50 px-4 py-2">
         {['Organisation', 'Branch', 'Status', 'Wallet Utilisation'].map((h) => (
-          <span key={h} className="flex-1 font-inter text-[9px] font-semibold uppercase tracking-wider text-[#9CA3AF]">
+          <span key={h} className="flex-1 font-inter text-[9px] font-semibold uppercase tracking-wider text-gray-400">
             {h}
           </span>
         ))}
       </div>
       {orgs.map((org, i) => (
-        <div key={i} className="flex items-center border-b border-[#F3F4F6] px-4 py-3">
+        <div key={i} className="flex items-center border-b border-gray-100 px-4 py-3">
           <div className="flex-1">
-            <div className="font-inter text-[10px] font-medium text-[#111827]">{org.name}</div>
-            <div className="font-inter text-[9px] text-[#9CA3AF]">{org.members}</div>
+            <div className="font-inter text-[10px] font-medium text-gray-900">{org.name}</div>
+            <div className="font-inter text-[9px] text-gray-400">{org.members}</div>
           </div>
-          <div className="flex-1 font-inter text-[9px] text-[#6B7280]">{org.branch}</div>
+          <div className="flex-1 font-inter text-[9px] text-gray-500">{org.branch}</div>
           <div className="flex-1">
             <span className={`rounded-full px-2 py-0.5 font-inter text-[8px] font-medium ${statusColors[org.status]}`}>
               {org.status}
             </span>
           </div>
-          <div className="flex-1 font-inter text-[10px] font-medium text-[#111827]">{org.util}</div>
+          <div className="flex-1 font-inter text-[10px] font-medium text-gray-900">{org.util}</div>
         </div>
       ))}
     </div>

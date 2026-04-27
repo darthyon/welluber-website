@@ -31,7 +31,7 @@ export function HowItWorksSection() {
   const [activeStep, setActiveStep] = useState(0)
 
   return (
-    <section id="how-it-works" className="bg-[#F9FAFB] py-16 sm:py-20 lg:py-24 scroll-mt-24">
+    <section id="how-it-works" className="bg-gray-50 py-16 sm:py-20 lg:py-24 scroll-mt-24">
       <Container>
         <BlurFade inView delay={0.1}>
           <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-brand)]">

@@ -57,7 +57,7 @@ export function NetworkSection() {
   }, [])
 
   return (
-    <section className="bg-[#F9FAFB] py-16 sm:py-20 lg:py-24">
+    <section className="bg-gray-50 py-16 sm:py-20 lg:py-24">
       <Container>
         <BlurFade inView delay={0.1}>
           <div className="mb-10 text-center sm:mb-12 lg:mb-16">
@@ -85,10 +85,10 @@ export function NetworkSection() {
                 containerRef={containerRef}
                 fromRef={centerRef}
                 toRef={hrRef}
-                pathColor="#C7D2FE"
+                pathColor="var(--color-brand-mid)"
                 pathWidth={2}
-                gradientStartColor="#4F46E5"
-                gradientStopColor="#C7D2FE"
+                gradientStartColor="var(--color-brand)"
+                gradientStopColor="var(--color-brand-mid)"
                 duration={4}
                 curvature={-30}
                 className="z-0"
@@ -97,10 +97,10 @@ export function NetworkSection() {
                 containerRef={containerRef}
                 fromRef={hrRef}
                 toRef={centerRef}
-                pathColor="#C7D2FE"
+                pathColor="var(--color-brand-mid)"
                 pathWidth={2}
-                gradientStartColor="#C7D2FE"
-                gradientStopColor="#4F46E5"
+                gradientStartColor="var(--color-brand-mid)"
+                gradientStopColor="var(--color-brand)"
                 duration={4}
                 curvature={-30}
                 reverse
@@ -110,10 +110,10 @@ export function NetworkSection() {
                 containerRef={containerRef}
                 fromRef={centerRef}
                 toRef={spRef}
-                pathColor="#C7D2FE"
+                pathColor="var(--color-brand-mid)"
                 pathWidth={2}
-                gradientStartColor="#4F46E5"
-                gradientStopColor="#C7D2FE"
+                gradientStartColor="var(--color-brand)"
+                gradientStopColor="var(--color-brand-mid)"
                 duration={4}
                 curvature={-30}
                 className="z-0"
@@ -122,10 +122,10 @@ export function NetworkSection() {
                 containerRef={containerRef}
                 fromRef={spRef}
                 toRef={centerRef}
-                pathColor="#C7D2FE"
+                pathColor="var(--color-brand-mid)"
                 pathWidth={2}
-                gradientStartColor="#C7D2FE"
-                gradientStopColor="#4F46E5"
+                gradientStartColor="var(--color-brand-mid)"
+                gradientStopColor="var(--color-brand)"
                 duration={4}
                 curvature={-30}
                 reverse
@@ -135,10 +135,10 @@ export function NetworkSection() {
                 containerRef={containerRef}
                 fromRef={centerRef}
                 toRef={employeeRef}
-                pathColor="#C7D2FE"
+                pathColor="var(--color-brand-mid)"
                 pathWidth={2}
-                gradientStartColor="#4F46E5"
-                gradientStopColor="#C7D2FE"
+                gradientStartColor="var(--color-brand)"
+                gradientStopColor="var(--color-brand-mid)"
                 duration={4}
                 className="z-0"
               />
@@ -146,10 +146,10 @@ export function NetworkSection() {
                 containerRef={containerRef}
                 fromRef={employeeRef}
                 toRef={centerRef}
-                pathColor="#C7D2FE"
+                pathColor="var(--color-brand-mid)"
                 pathWidth={2}
-                gradientStartColor="#C7D2FE"
-                gradientStopColor="#4F46E5"
+                gradientStartColor="var(--color-brand-mid)"
+                gradientStopColor="var(--color-brand)"
                 duration={4}
                 reverse
                 className="z-0"

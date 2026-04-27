@@ -30,15 +30,15 @@ export function Ripple({
         return (
           <div
             key={i}
-            className="absolute rounded-full border bg-[#4F46E5] [animation:ripple_2s_ease_infinite]"
+            className="absolute rounded-full border bg-brand [animation:ripple_2s_ease_infinite]"
             style={{
               width: `${size}px`,
               height: `${size}px`,
               opacity,
               animationDelay,
               borderStyle,
-              borderColor: `rgba(79, 70, 229, ${borderOpacity})`,
-              backgroundColor: `rgba(79, 70, 229, ${opacity * 0.5})`,
+              borderColor: `rgba(67, 56, 202, ${borderOpacity})`,
+              backgroundColor: `rgba(67, 56, 202, ${opacity * 0.5})`,
             }}
           />
         )

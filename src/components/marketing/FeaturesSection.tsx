@@ -33,18 +33,18 @@ function BentoCard({ icon, overline, title, description, visual, featured, delay
   return (
     <BlurFade inView delay={delay} className="h-full">
       <MagicCard className="h-full">
-        <div className="relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white p-6 transition-all duration-150 hover:-translate-y-0.5 hover:border-[#4F46E5] hover:shadow-[0_8px_24px_rgba(79,70,229,0.08)] sm:p-7">
-          {featured && <BorderBeam colorFrom="#4F46E5" colorTo="#C7D2FE" duration={8} />}
+        <div className="relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white p-6 transition-all duration-150 hover:-translate-y-0.5 hover:border-brand hover:shadow-[0_8px_24px_rgba(67,56,202,0.08)] sm:p-7">
+          {featured && <BorderBeam colorFrom="var(--color-brand)" colorTo="var(--color-brand-mid)" duration={8} />}
           {/* Visual area — grows to fill available space */}
           <div className="h-[240px] overflow-hidden rounded-lg border border-gray-100 bg-gray-50 sm:h-auto sm:min-h-0 sm:flex-1">
             {visual}
           </div>
           {/* Icon + overline row */}
           <div className="mt-4 flex items-center gap-2">
-            <div className="flex h-6 w-6 items-center justify-center rounded text-[#4F46E5]">
+            <div className="flex h-6 w-6 items-center justify-center rounded text-brand">
               {icon}
             </div>
-            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[#4F46E5]">
+            <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-brand">
               {overline}
             </p>
           </div>
@@ -65,7 +65,7 @@ export function FeaturesSection() {
     <section id="features" className="bg-white py-16 sm:py-20 lg:py-24 scroll-mt-24">
       <Container>
         <BlurFade inView delay={0.1}>
-          <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[#4F46E5]">
+          <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-brand">
             PLATFORM
           </p>
           <h2 className="mt-3 font-[family-name:var(--font-bricolage)] text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">

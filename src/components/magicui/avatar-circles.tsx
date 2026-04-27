@@ -42,7 +42,7 @@ export function AvatarCircles({
       ))}
       {numPeople !== undefined && (
         <div
-          className="flex items-center justify-center rounded-full border-2 border-white bg-[#E5E7EB] font-inter font-semibold text-[#4B5563]"
+          className="flex items-center justify-center rounded-full border-2 border-white bg-gray-200 font-inter font-semibold text-gray-600"
           style={{
             width: size,
             height: size,

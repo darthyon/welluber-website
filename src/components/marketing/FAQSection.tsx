@@ -69,7 +69,7 @@ const faqGroups = [
 
 export function FAQSection() {
   return (
-    <section id="faq" className="bg-[#F9FAFB] py-16 sm:py-20 lg:py-24 scroll-mt-24">
+    <section id="faq" className="bg-gray-50 py-16 sm:py-20 lg:py-24 scroll-mt-24">
       <Container className="max-w-[720px]">
         <BlurFade inView delay={0.1}>
           <p className="font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-brand)]">

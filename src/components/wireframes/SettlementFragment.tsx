@@ -59,10 +59,10 @@ const iconMap: Record<IconKey, React.ComponentType<{ size: number; className?: s
 }
 
 const colorStyles: Record<ColorKey, { well: string; icon: string }> = {
-  green:  { well: 'bg-[#D1FAE5]', icon: 'text-[#059669]' },
-  indigo: { well: 'bg-[#EEF2FF]', icon: 'text-[#4F46E5]' },
-  amber:  { well: 'bg-[#FEF3C7]', icon: 'text-[#D97706]' },
-  blue:   { well: 'bg-[#DBEAFE]', icon: 'text-[#2563EB]' },
+  green:  { well: 'bg-emerald-100', icon: 'text-emerald-600' },
+  indigo: { well: 'bg-brand-faint', icon: 'text-brand' },
+  amber:  { well: 'bg-amber-100', icon: 'text-amber-600' },
+  blue:   { well: 'bg-blue-100', icon: 'text-blue-600' },
 }
 
 function NotificationRow({ color, icon, title, sub }: NotificationItem) {
@@ -70,7 +70,7 @@ function NotificationRow({ color, icon, title, sub }: NotificationItem) {
   const { well, icon: iconColor } = colorStyles[color]
 
   return (
-    <div className="flex items-center gap-3 rounded-[10px] border border-[#E5E7EB] bg-white px-3 py-2.5 shadow-xs">
+    <div className="flex items-center gap-3 rounded-[10px] border border-gray-200 bg-white px-3 py-2.5 shadow-xs">
       <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${well}`}>
         <Icon size={14} className={iconColor} />
       </div>
