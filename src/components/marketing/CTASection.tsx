@@ -1,29 +1,23 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { useInView } from 'motion/react'
 import { BlurFade } from '@/components/magicui/blur-fade'
+import { DotPattern } from '@/components/magicui/dot-pattern'
 import { Container } from '@/components/shared/Container'
-import { Meteors } from '@/components/magicui/meteors'
 import { useContactModal } from './ContactModal'
 
 export function CTASection() {
-  const ref = useRef<HTMLElement>(null)
-  const isInView = useInView(ref, { amount: 0.2 })
-  const [reduceMotion, setReduceMotion] = useState(false)
   const { setOpen: setContactOpen } = useContactModal()
 
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const update = () => setReduceMotion(mq.matches)
-    update()
-    mq.addEventListener('change', update)
-    return () => mq.removeEventListener('change', update)
-  }, [])
-
   return (
-    <section ref={ref} className="relative overflow-hidden bg-dark-surface py-16 sm:py-20 lg:py-24">
-      {isInView && !reduceMotion ? <Meteors number={16} /> : null}
+    <section className="relative overflow-hidden bg-dark-surface py-16 sm:py-20 lg:py-24">
+      <DotPattern
+        width={20}
+        height={20}
+        cx={1}
+        cy={1}
+        cr={1}
+        className="fill-white/[0.04]"
+      />
       <Container className="relative">
         <BlurFade inView delay={0.1}>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-12">
@@ -33,10 +27,10 @@ export function CTASection() {
                 READY TO INVEST IN YOUR PEOPLE?
               </p>
               <h2 className="mt-3 font-[family-name:var(--font-bricolage)] text-[40px] font-bold leading-[1.15] tracking-[-0.8px] text-white">
-                Your people deserve benefits<br />that actually reach them.
+                Stop chasing claim forms.<br />Start seeing the spend.
               </h2>
               <p className="mt-4 max-w-md font-[family-name:var(--font-inter)] text-base leading-relaxed text-dark-muted">
-                Join the companies using Welluber to close the gap between wellness budgets and real outcomes — for HR, employees, and providers alike.
+                Founding-cohort companies get founder-led onboarding, direct input on roadmap, and pricing locked in for as long as you stay.
               </p>
               <button
                 onClick={() => setContactOpen(true)}
@@ -46,9 +40,8 @@ export function CTASection() {
               </button>
             </div>
 
-            {/* Right — decorative cards */}
+            {/* Right — policy cards */}
             <div className="flex flex-col gap-4">
-              {/* Card 1 — Policy Active */}
               <div className="rounded-xl border border-white/10 bg-white/5 px-5 py-4 shadow-lg backdrop-blur-sm">
                 <div className="flex items-center gap-2">
                   <div className="h-2 w-2 rounded-full bg-emerald-500" />
@@ -61,7 +54,6 @@ export function CTASection() {
                 </p>
               </div>
 
-              {/* Card 2 — Utilisation */}
               <div className="rounded-xl border border-white/10 bg-white/5 px-5 py-4 shadow-lg backdrop-blur-sm">
                 <div className="flex items-center justify-between gap-3">
                   <span className="font-[family-name:var(--font-inter)] text-xs font-semibold text-white">

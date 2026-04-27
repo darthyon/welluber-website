@@ -52,16 +52,21 @@ export function OrbitingCircles({
           <div
             style={
               {
-                "--duration": calculatedDuration,
                 "--radius": radius,
                 "--angle": 0,
-                "--icon-size": `${iconSize}px`,
-                animationDelay,
+                width: `${iconSize}px`,
+                height: `${iconSize}px`,
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                marginLeft: `-${iconSize / 2}px`,
+                marginTop: `-${iconSize / 2}px`,
+                animation: `orbit ${calculatedDuration}s linear ${animationDelay} infinite`,
+                animationDirection: reverse ? 'reverse' : 'normal',
               } as React.CSSProperties
             }
             className={cn(
-              `animate-orbit absolute flex size-(--icon-size) transform-gpu items-center justify-center rounded-full`,
-              { "[animation-direction:reverse]": reverse },
+              'flex items-center justify-center rounded-full',
               className
             )}
             {...props}
