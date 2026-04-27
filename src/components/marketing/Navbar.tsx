@@ -4,10 +4,13 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Container } from '@/components/shared/Container'
+import { MobileNav } from './MobileNav'
+import { useContactModal } from './ContactModal'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+  const { setOpen: setContactOpen } = useContactModal()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -81,13 +84,16 @@ export function Navbar() {
           )}
         </nav>
 
-        {/* CTA */}
-        <a
-          href="mailto:contact@welluber.com"
-          className="rounded-lg bg-[color:var(--color-brand)] px-4 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-colors duration-150 hover:bg-[color:var(--color-brand-dark)]"
-        >
-          Talk to Us
-        </a>
+        {/* Desktop CTA + Mobile menu */}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setContactOpen(true)}
+            className="hidden rounded-lg bg-[color:var(--color-brand)] px-4 py-2.5 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-colors duration-150 hover:bg-[color:var(--color-brand-dark)] active:scale-[0.98] md:inline-block"
+          >
+            Talk to Us
+          </button>
+          <MobileNav />
+        </div>
       </Container>
     </header>
   )

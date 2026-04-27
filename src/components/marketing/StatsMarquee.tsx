@@ -18,7 +18,7 @@ function StatPill({ label, value }: { label: string; value: string }) {
         {value}
       </span>
       <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand-mid)]" />
-      <span className="font-[family-name:var(--font-inter)] text-xs text-gray-400 sm:text-sm">
+      <span className="font-[family-name:var(--font-inter)] text-xs text-gray-500 sm:text-sm">
         {label}
       </span>
     </div>

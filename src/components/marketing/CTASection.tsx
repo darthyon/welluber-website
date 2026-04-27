@@ -5,11 +5,13 @@ import { useInView } from 'motion/react'
 import { BlurFade } from '@/components/magicui/blur-fade'
 import { Container } from '@/components/shared/Container'
 import { Meteors } from '@/components/magicui/meteors'
+import { useContactModal } from './ContactModal'
 
 export function CTASection() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { amount: 0.2 })
   const [reduceMotion, setReduceMotion] = useState(false)
+  const { setOpen: setContactOpen } = useContactModal()
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -36,12 +38,12 @@ export function CTASection() {
               <p className="mt-4 max-w-md font-[family-name:var(--font-inter)] text-base leading-relaxed text-dark-muted">
                 Join the companies using Welluber to close the gap between wellness budgets and real outcomes — for HR, employees, and providers alike.
               </p>
-              <a
-                href="mailto:contact@welluber.com"
+              <button
+                onClick={() => setContactOpen(true)}
                 className="mt-8 inline-block rounded-lg bg-[color:var(--color-brand)] px-6 py-3 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-all duration-150 hover:bg-[color:var(--color-brand-dark)] active:scale-[0.98]"
               >
                 Talk to Us
-              </a>
+              </button>
             </div>
 
             {/* Right — decorative cards */}

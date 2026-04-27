@@ -8,8 +8,10 @@ import { NumberTicker } from '@/components/magicui/number-ticker'
 import { Safari } from '@/components/magicui/safari'
 import { GridPattern } from '@/components/magicui/grid-pattern'
 import { Container } from '@/components/shared/Container'
+import { useContactModal } from './ContactModal'
 
 export function HeroSection() {
+  const { setOpen: setContactOpen } = useContactModal()
   return (
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
       {/* Subtle grid background */}
@@ -53,12 +55,12 @@ export function HeroSection() {
               transition={{ delay: 0.5, duration: 0.3 }}
               className="mt-8 flex flex-wrap items-center gap-3"
             >
-              <a
-                href="mailto:contact@welluber.com"
+              <button
+                onClick={() => setContactOpen(true)}
                 className="rounded-lg bg-[color:var(--color-brand)] px-6 py-3 font-[family-name:var(--font-inter)] text-sm font-medium text-white transition-all duration-150 hover:bg-[color:var(--color-brand-dark)] active:scale-[0.98]"
               >
                 Talk to Us
-              </a>
+              </button>
               <a
                 href="#features"
                 className="flex items-center gap-1 font-[family-name:var(--font-inter)] text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"

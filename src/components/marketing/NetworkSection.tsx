@@ -31,7 +31,7 @@ function Node({
         <p className="font-[family-name:var(--font-inter)] text-sm font-semibold text-gray-900 sm:text-base">
           {label}
         </p>
-        <p className="font-[family-name:var(--font-inter)] text-xs text-gray-400 sm:text-sm">
+        <p className="font-[family-name:var(--font-inter)] text-xs text-gray-500 sm:text-sm">
           {sublabel}
         </p>
       </div>
@@ -76,7 +76,7 @@ export function NetworkSection() {
         {/* Beam diagram */}
         <div
           ref={containerRef}
-          className="relative mx-auto flex h-[420px] max-w-[900px] items-center justify-center sm:h-[440px] md:h-[460px]"
+          className="relative mx-auto flex h-[380px] max-w-[900px] items-center justify-center px-2 sm:h-[420px] sm:px-4 md:h-[460px]"
         >
           {/* Beams rendered first — sit behind cards via z-0 */}
           {isInView && !reduceMotion ? (
@@ -158,7 +158,7 @@ export function NetworkSection() {
           ) : null}
 
           {/* HR — top left */}
-          <div className="absolute left-1 z-10 top-4 sm:left-4 sm:top-6 md:left-0 md:top-0">
+          <div className="absolute left-2 z-10 top-4 sm:left-4 sm:top-6 md:left-0 md:top-0">
             <Node
               nodeRef={hrRef}
               icon={<Buildings size={28} weight="regular" />}
@@ -168,7 +168,7 @@ export function NetworkSection() {
           </div>
 
           {/* SP — top right */}
-          <div className="absolute right-1 z-10 top-4 sm:right-4 sm:top-6 md:right-0 md:top-0">
+          <div className="absolute right-2 z-10 top-4 sm:right-4 sm:top-6 md:right-0 md:top-0">
             <Node
               nodeRef={spRef}
               icon={<Storefront size={28} weight="regular" />}
@@ -199,7 +199,7 @@ export function NetworkSection() {
           </div>
 
           {/* Employee — bottom center */}
-          <div className="absolute bottom-2 left-1/2 z-10 -translate-x-1/2 sm:bottom-4 md:bottom-0">
+          <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 sm:bottom-6 md:bottom-0">
             <Node
               nodeRef={employeeRef}
               icon={<UserCircle size={28} weight="regular" />}

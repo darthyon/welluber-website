@@ -84,7 +84,7 @@ export function FAQSection() {
           {faqGroups.map((group, gi) => (
             <BlurFade key={gi} inView delay={0.15 + gi * 0.05}>
               <div>
-                <p className="mb-3 font-[family-name:var(--font-inter)] text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-400 sm:mb-4">
+                <p className="mb-3 font-[family-name:var(--font-inter)] text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-500 sm:mb-4">
                   {group.audience}
                 </p>
                 <Accordion
