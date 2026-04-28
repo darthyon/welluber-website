@@ -62,7 +62,7 @@ function BentoCard({ icon, overline, title, description, visual, featured, delay
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="bg-white py-16 sm:py-20 lg:py-24 scroll-mt-24">
+    <section id="features" className="overflow-hidden bg-white py-16 sm:py-20 lg:py-24 scroll-mt-24">
       <Container>
         <BlurFade inView delay={0.1}>
           <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">

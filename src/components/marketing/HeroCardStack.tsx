@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { StandingPresenting } from '@/components/poses'
 
 /* ------------------------------------------------------------------ */
@@ -345,6 +345,25 @@ function PolicyCard() {
 
 export function HeroCardStack() {
   const [isHovered, setIsHovered] = useState(false)
+  const [isTapped, setIsTapped] = useState(false)
+  const isActive = isHovered || isTapped
+
+  // Responsive scale — measures parent width, scales 580px design down to fit
+  const measureRef = useRef<HTMLDivElement>(null)
+  const [scale, setScale] = useState(1)
+
+  useEffect(() => {
+    const update = () => {
+      const parent = measureRef.current?.parentElement
+      if (!parent) return
+      setScale(Math.min(1, parent.offsetWidth / 580))
+    }
+    update()
+    const ro = new ResizeObserver(update)
+    const parent = measureRef.current?.parentElement
+    if (parent) ro.observe(parent)
+    return () => ro.disconnect()
+  }, [])
 
   return (
     <motion.div
@@ -354,13 +373,30 @@ export function HeroCardStack() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.4 }}
     >
+      {/* Scale wrapper — outer div sizes to scaled dimensions, inner div scales content */}
+      <div
+        ref={measureRef}
+        style={{ width: 580 * scale, height: 440 * scale, position: 'relative' }}
+      >
+        <div
+          style={{
+            width: 580,
+            height: 440,
+            transformOrigin: 'top left',
+            transform: `scale(${scale})`,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+          }}
+        >
       <motion.div
         className="relative"
         style={{ width: 580, height: 440 }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
+        onTap={() => setIsTapped((v) => !v)}
         initial="rest"
-        animate={isHovered ? 'hover' : 'rest'}
+        animate={isActive ? 'hover' : 'rest'}
       >
         {/* Sparkle burst */}
         <SparkleBurst />
@@ -475,6 +511,8 @@ export function HeroCardStack() {
           <ReceiptCard />
         </motion.div>
       </motion.div>
+        </div>
+      </div>
     </motion.div>
   )
 }

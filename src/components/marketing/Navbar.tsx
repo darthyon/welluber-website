@@ -31,6 +31,9 @@ export function Navbar() {
             src="/img_logomark.svg"
             alt="Welluber"
             className="h-8 w-auto object-contain"
+            width={120}
+            height={32}
+            fetchPriority="high"
             draggable={false}
           />
         </Link>

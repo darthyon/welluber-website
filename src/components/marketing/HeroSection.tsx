@@ -69,7 +69,7 @@ export function HeroSection() {
           </div>
 
           {/* Right col — card stack */}
-          <div className="relative min-w-0 lg:mt-0">
+          <div className="relative min-w-0 overflow-hidden lg:overflow-visible lg:mt-0">
             <HeroCardStack />
           </div>
         </div>
