@@ -22,7 +22,7 @@ export function HeroSection() {
       />
 
       <Container className="relative">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-16">
+        <div className="grid gap-4 sm:gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-16">
           {/* Left col */}
           <div className="min-w-0">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-mid bg-brand-faint px-3 py-1 font-geist text-xs font-medium text-brand">
