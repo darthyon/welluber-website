@@ -1,4 +1,12 @@
 import type { NextConfig } from 'next'
+import path from 'path'
+import { existsSync } from 'fs'
+
+function findRoot(dir: string): string {
+  if (existsSync(path.join(dir, 'node_modules'))) return dir
+  const parent = path.dirname(dir)
+  return parent === dir ? dir : findRoot(parent)
+}
 
 const nextConfig: NextConfig = {
   output: 'export',
@@ -7,7 +15,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   turbopack: {
-    root: __dirname,
+    root: findRoot(__dirname),
   },
 }
 

@@ -24,13 +24,13 @@ export function AnalyticsFragment() {
       </div>
 
       {/* Chart */}
-      <div className="mt-3 flex h-20 items-end gap-1.5">
+      <div className="mt-2 flex h-16 items-end gap-1.5">
         {bars.map((bar, i) => (
           <div key={i} className="flex flex-1 flex-col items-center gap-1">
             <div
               className="w-full rounded-t transition-all"
               style={{
-                height: `${bar.height * 0.55}px`,
+                height: `${bar.height * 0.45}px`,
                 backgroundColor: bar.active ? 'var(--color-brand)' : 'var(--color-brand-mid)',
               }}
             />
@@ -39,15 +39,15 @@ export function AnalyticsFragment() {
       </div>
 
       {/* Insights */}
-      <div className="mt-4 space-y-2">
-        <div className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2">
+      <div className="mt-3 space-y-1.5">
+        <div className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-1.5">
           <span className="font-geist text-[10px] text-gray-500">Peak day</span>
           <div className="flex items-center gap-1">
             <span className="font-geist text-[10px] font-semibold text-gray-900">Friday</span>
             <span className="font-geist text-[9px] text-emerald-500">+24%</span>
           </div>
         </div>
-        <div className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2">
+        <div className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-1.5">
           <span className="font-geist text-[10px] text-gray-500">Avg. daily</span>
           <div className="flex items-center gap-1">
             <div className="h-2.5 w-10 rounded bg-gray-200" />

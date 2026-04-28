@@ -5,7 +5,7 @@ import {
   Wallet,
   ArrowsLeftRight,
   ChartBar,
-  Buildings,
+  Storefront,
   ShieldCheck,
 } from '@phosphor-icons/react'
 import { BlurFade } from '@/components/magicui/blur-fade'
@@ -15,7 +15,7 @@ import { PolicyFragment } from '@/components/wireframes/PolicyFragment'
 import { WalletFragment } from '@/components/wireframes/WalletFragment'
 import { SettlementFragment } from '@/components/wireframes/SettlementFragment'
 import { AnalyticsFragment } from '@/components/wireframes/AnalyticsFragment'
-import { OrgListFragment } from '@/components/wireframes/OrgListFragment'
+import { ServiceProviderFragment } from '@/components/wireframes/ServiceProviderFragment'
 import { TrustFragment } from '@/components/wireframes/TrustFragment'
 import { Container } from '@/components/shared/Container'
 
@@ -128,14 +128,14 @@ export function FeaturesSection() {
             />
           </div>
 
-          {/* Org — spans 2 cols via named area */}
+          {/* Service Providers — spans 2 cols via named area */}
           <div className="sm:[grid-area:org]">
             <BentoCard
-              icon={<Buildings size={16} />}
-              overline="MULTI-ORG"
-              title="Every org. Every branch. One view."
-              description="Onboard any number of organisations and branches. Each runs independently. You see everything."
-              visual={<OrgListFragment />}
+              icon={<Storefront size={16} />}
+              overline="SERVICE PROVIDERS"
+              title="Oversee every branch. One scan."
+              description="Manage branches from one dashboard — scan vouchers at the door, track redemptions per location, and watch footfall in real time."
+              visual={<ServiceProviderFragment />}
               delay={0.22}
             />
           </div>
