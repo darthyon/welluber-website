@@ -52,8 +52,8 @@ export function OrbitingCircles({
           <div
             style={
               {
-                "--radius": radius,
-                "--angle": 0,
+                "--orbit-radius": radius,
+                "--orbit-angle": 0,
                 width: `${iconSize}px`,
                 height: `${iconSize}px`,
                 position: 'absolute',
