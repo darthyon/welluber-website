@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { Poppins, Geist } from 'next/font/google'
 import { Navbar } from '@/components/marketing/Navbar'
 import { Footer } from '@/components/marketing/Footer'
+import { BackToTop } from '@/components/shared/BackToTop'
 import { ContactModalProvider } from '@/components/marketing/ContactModal'
 
 const poppins = Poppins({
@@ -31,6 +32,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
         <Navbar />
         {children}
       </ContactModalProvider>
+      <BackToTop />
       <Footer />
     </div>
   )

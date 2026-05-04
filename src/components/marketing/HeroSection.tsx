@@ -57,12 +57,14 @@ export function HeroSection() {
               >
                 Talk to Us
               </button>
-              <a
-                href="#features"
+              <button
+                onClick={() => {
+                  document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })
+                }}
                 className="font-geist text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
               >
                 See how it works ↓
-              </a>
+              </button>
             </motion.div>
 
 

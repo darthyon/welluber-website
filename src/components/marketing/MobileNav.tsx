@@ -11,20 +11,19 @@ import {
   SheetTrigger,
   SheetClose,
 } from '@/components/ui/sheet'
-import { useContactModal } from './ContactModal'
 
 export function MobileNav() {
   const pathname = usePathname()
-  const { setOpen: setContactOpen } = useContactModal()
-  const isHome = pathname === '/' || pathname === ''
 
   const linkClass =
     'block py-3 font-geist text-base font-medium text-gray-600 transition-colors hover:text-gray-900'
 
+  const activeLinkClass = 'text-gray-900'
+
   return (
     <Sheet>
       <SheetTrigger
-        className="inline-flex h-10 w-10 items-center justify-center rounded-md text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 md:hidden"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-md text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900"
         aria-label="Open menu"
       >
         <List size={24} weight="regular" />
@@ -35,61 +34,26 @@ export function MobileNav() {
           <SheetTitle>Navigation menu</SheetTitle>
         </SheetHeader>
 
-        <div className="flex h-full flex-col">
-          {/* Close button row — positioned top-right by default in Sheet; add top padding to clear it */}
-          <nav className="flex-1 px-6 pt-14">
-            <div className="flex flex-col">
-              {isHome ? (
-                <>
-                  <SheetClose asChild>
-                    <a href="#features" className={linkClass}>
-                      Solutions
-                    </a>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <a href="#platform" className={linkClass}>
-                      Platform
-                    </a>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <a href="#faq" className={linkClass}>
-                      FAQ
-                    </a>
-                  </SheetClose>
-                </>
-              ) : (
-                <>
-                  <SheetClose asChild>
-                    <Link href="/#features" className={linkClass}>
-                      Solutions
-                    </Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link href="/#platform" className={linkClass}>
-                      Platform
-                    </Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link href="/#faq" className={linkClass}>
-                      FAQ
-                    </Link>
-                  </SheetClose>
-                </>
-              )}
-            </div>
-          </nav>
-
-          <div className="border-t border-gray-100 p-6">
+        <nav className="flex h-full flex-col px-6 pt-14">
+          <div className="flex flex-col">
             <SheetClose asChild>
-              <button
-                onClick={() => setContactOpen(true)}
-                className="w-full rounded-lg bg-brand px-4 py-3 font-geist text-sm font-medium text-white transition-colors duration-150 hover:bg-brand-dark active:scale-[0.98]"
+              <Link
+                href="/about-us"
+                className={`${linkClass} ${pathname === '/about-us' ? activeLinkClass : ''}`}
               >
-                Talk to Us
-              </button>
+                About Us
+              </Link>
+            </SheetClose>
+            <SheetClose asChild>
+              <Link
+                href="/faq"
+                className={`${linkClass} ${pathname === '/faq' ? activeLinkClass : ''}`}
+              >
+                FAQ
+              </Link>
             </SheetClose>
           </div>
-        </div>
+        </nav>
       </SheetContent>
     </Sheet>
   )

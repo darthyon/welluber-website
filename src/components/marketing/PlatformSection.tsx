@@ -1,329 +1,348 @@
 'use client'
 
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useInView } from 'motion/react'
-import { Buildings, UserCircle, Storefront, CheckCircle, ArrowRight } from '@phosphor-icons/react'
-import { AnimatedBeam } from '@/components/magicui/animated-beam'
+import { CheckCircle } from '@phosphor-icons/react'
+import { Marquee } from '@/components/magicui/marquee'
 import { BlurFade } from '@/components/magicui/blur-fade'
-import { Ripple } from '@/components/magicui/ripple'
 import { Container } from '@/components/shared/Container'
 import { TabPanelHR } from '@/components/wireframes/TabPanelHR'
 import { TabPanelEmployee } from '@/components/wireframes/TabPanelEmployee'
 import { TabPanelSP } from '@/components/wireframes/TabPanelSP'
 import { useContactModal } from './ContactModal'
 
-type PersonaKey = 'hr' | 'employee' | 'sp'
+/* ------------------------------------------------------------------ */
+/*  Data                                                               */
+/* ------------------------------------------------------------------ */
 
-interface PersonaData {
-  key: PersonaKey
+type RoleKey = 'hr' | 'employee' | 'sp'
+
+interface PainPoint {
+  avatar: string
+  alt: string
+  role: string
+  roleKey: RoleKey
+  quote: string
+}
+
+const roleColors: Record<RoleKey, { ring: string; bg: string; dot: string }> = {
+  hr: { ring: 'ring-brand', bg: 'bg-brand/10', dot: 'bg-brand' },
+  employee: { ring: 'ring-emerald-500', bg: 'bg-emerald-50', dot: 'bg-emerald-500' },
+  sp: { ring: 'ring-amber-500', bg: 'bg-amber-50', dot: 'bg-amber-500' },
+}
+
+const row1: PainPoint[] = [
+  {
+    avatar: '/images/avatars/hr-1.webp',
+    alt: 'HR Admin avatar',
+    role: 'HR Admin',
+    roleKey: 'hr',
+    quote: 'I spent months building a benefits playbook. Nobody opened and read it.',
+  },
+  {
+    avatar: '/images/avatars/emp-1.webp',
+    alt: 'Employee avatar',
+    role: 'Employee',
+    roleKey: 'employee',
+    quote: 'I have no idea what benefits I\'m even entitled to.',
+  },
+  {
+    avatar: '/images/avatars/sp-1.webp',
+    alt: 'Service Provider avatar',
+    role: 'Service Provider',
+    roleKey: 'sp',
+    quote: 'I\'m still waiting for payments from last quarter.',
+  },
+  {
+    avatar: '/images/avatars/emp-2.webp',
+    alt: 'Employee avatar',
+    role: 'Employee',
+    roleKey: 'employee',
+    quote: 'I prepaid for a gym membership I\'ll never use.',
+  },
+]
+
+const row2: PainPoint[] = [
+  {
+    avatar: '/images/avatars/hr-2.webp',
+    alt: 'HR Admin avatar',
+    role: 'HR Admin',
+    roleKey: 'hr',
+    quote: 'I\'m drowning in spreadsheets tracking who spent what.',
+  },
+  {
+    avatar: '/images/avatars/sp-2.webp',
+    alt: 'Service Provider avatar',
+    role: 'Service Provider',
+    roleKey: 'sp',
+    quote: 'Every corporate client has a different invoice process.',
+  },
+  {
+    avatar: '/images/avatars/emp-3.webp',
+    alt: 'Employee avatar',
+    role: 'Employee',
+    roleKey: 'employee',
+    quote: 'Filing a claim means a week of back-and-forth.',
+  },
+  {
+    avatar: '/images/avatars/hr-3.webp',
+    alt: 'HR Admin avatar',
+    role: 'HR Admin',
+    roleKey: 'hr',
+    quote: 'We spend thousands on benefits nobody uses.',
+  },
+]
+
+/* ------------------------------------------------------------------ */
+/*  Tab content                                                        */
+/* ------------------------------------------------------------------ */
+
+type TabKey = 'hr' | 'employee' | 'sp'
+
+interface TabContent {
   label: string
   title: string
   body: string
   bullets: string[]
-  cta?: { label: string; reason?: string }
   visual: React.ReactNode
-  image: string
-  icon: React.ReactNode
 }
 
-const personas: PersonaData[] = [
-  {
-    key: 'hr',
+const tabs: Record<TabKey, TabContent> = {
+  hr: {
     label: 'HR Admin',
-    title: 'Set policies in minutes.',
-    body: 'Create benefit rules, assign them to teams, and watch utilisation in real time.',
-    bullets: ['Target by role, department, or tier', 'Auto-enforce spending limits', 'Full audit trail, export-ready'],
-    cta: { label: 'Talk to Us', reason: 'hr' },
+    title: 'Total control. Complete visibility.',
+    body: 'Define policies by role, set spending limits, and monitor utilisation across your entire workforce — with a full audit trail built in from day one.',
+    bullets: [
+      'Policy deployed in minutes, not weeks',
+      'Real-time budget tracking per employee and category',
+      'Immutable records, compliance-ready at all times',
+    ],
     visual: <TabPanelHR />,
-    image: '/hr-admin.webp',
-    icon: <Buildings size={20} weight="regular" />,
   },
-  {
-    key: 'employee',
-    label: 'Employees',
-    title: 'Spend your balance, your way.',
-    body: 'One wallet for fitness, wellness, and lifestyle — online or walk-in.',
-    bullets: ['Browse 248+ verified providers', 'Instant redemption, zero forms', 'See balance and history in real time'],
-    cta: { label: 'Recommend Us', reason: 'employee' },
-    visual: <TabPanelEmployee />,
-    image: '/employee.webp',
-    icon: <UserCircle size={20} weight="regular" />,
-  },
-  {
-    key: 'sp',
+  sp: {
     label: 'Service Providers',
-    title: 'Get paid. No chasing.',
-    body: 'Accept corporate wallet payments and receive settlements on schedule.',
-    bullets: ['Multi-org payout dashboard', 'Guaranteed monthly settlements', 'New corporate clients, zero sales effort'],
-    cta: { label: 'Apply as a provider', reason: 'provider' },
+    title: 'Grow your clientele. Get paid reliably.',
+    body: 'Access a network of corporate clients and receive guaranteed, automated settlements every cycle — so you can focus on delivering great service, not tracking down payments.',
+    bullets: [
+      'Monthly settlements, direct to your bank account',
+      'Real-time payout and transaction visibility',
+      'No invoicing, no follow-up, no delays',
+    ],
     visual: <TabPanelSP />,
-    image: '/sp-admin.webp',
-    icon: <Storefront size={20} weight="regular" />,
   },
-]
+  employee: {
+    label: 'Employees',
+    title: 'Your benefits, on your terms.',
+    body: 'The moment HR activates your account, your wallet is live. Browse verified providers, purchase in-app, or walk in — no forms, no reimbursements, no out-of-pocket surprises.',
+    bullets: [
+      'Access verified service providers',
+      'Spend online or walk in — one wallet, everywhere',
+      'See your balance, history, and entitlements in real time',
+    ],
+    visual: <TabPanelEmployee />,
+  },
+}
 
-const tabOrder: PersonaKey[] = ['hr', 'employee', 'sp']
-const AUTOPLAY_INTERVAL = 5000
+const tabKeys: TabKey[] = ['hr', 'sp', 'employee']
 
-export function PlatformSection() {
-  const [activePersona, setActivePersona] = useState<PersonaKey>('hr')
-  const [reduceMotion, setReduceMotion] = useState(false)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const centerRef = useRef<HTMLDivElement>(null)
-  const hrRef = useRef<HTMLDivElement>(null)
-  const employeeRef = useRef<HTMLDivElement>(null)
-  const spRef = useRef<HTMLDivElement>(null)
-  const isInView = useInView(containerRef, { amount: 0.2 })
-  const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const { setOpen: setContactOpen, setInitialReason } = useContactModal()
+/* ------------------------------------------------------------------ */
+/*  Avatar component                                                   */
+/* ------------------------------------------------------------------ */
 
-  const refs: Record<PersonaKey, React.RefObject<HTMLDivElement | null>> = {
-    hr: hrRef,
-    employee: employeeRef,
-    sp: spRef,
-  }
+function AvatarCircle({
+  src,
+  alt,
+  roleKey,
+}: {
+  src: string
+  alt: string
+  roleKey: RoleKey
+}) {
+  const [error, setError] = useState(false)
 
-  const activeData = personas.find((p) => p.key === activePersona)!
-
-  // Reduced motion
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const update = () => setReduceMotion(mq.matches)
-    update()
-    mq.addEventListener('change', update)
-    return () => mq.removeEventListener('change', update)
-  }, [])
-
-  // Autoplay
-  const startAutoplay = useCallback(() => {
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current)
-    autoPlayRef.current = setInterval(() => {
-      setActivePersona((prev) => {
-        const idx = tabOrder.indexOf(prev)
-        return tabOrder[(idx + 1) % tabOrder.length]
-      })
-    }, AUTOPLAY_INTERVAL)
-  }, [])
-
-  const stopAutoplay = useCallback(() => {
-    if (autoPlayRef.current) {
-      clearInterval(autoPlayRef.current)
-      autoPlayRef.current = null
-    }
-  }, [])
-
-  useEffect(() => {
-    if (isAutoPlaying) startAutoplay()
-    return () => stopAutoplay()
-  }, [isAutoPlaying, startAutoplay, stopAutoplay])
-
-  const selectPersona = (key: PersonaKey) => {
-    setIsAutoPlaying(false)
-    setActivePersona(key)
+  if (error) {
+    return (
+      <div
+        className={`h-10 w-10 shrink-0 rounded-full ${roleColors[roleKey].bg}`}
+      />
+    )
   }
 
   return (
-    <section id="platform" className="bg-gray-50 py-14 sm:py-16 lg:py-20 scroll-mt-24">
+    <img
+      src={src}
+      alt={alt}
+      onError={() => setError(true)}
+      className={`h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-offset-1 ${roleColors[roleKey].ring}`}
+      draggable={false}
+    />
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/*  Pain point card                                                    */
+/* ------------------------------------------------------------------ */
+
+function PainPointCard({ point }: { point: PainPoint }) {
+  return (
+    <div className="flex w-[280px] shrink-0 flex-col gap-3 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm sm:w-[300px]">
+      {/* Avatar + role badge row */}
+      <div className="flex items-center gap-2.5">
+        <AvatarCircle
+          src={point.avatar}
+          alt={point.alt}
+          roleKey={point.roleKey}
+        />
+        <div className="inline-flex items-center gap-1.5 rounded-full border border-gray-200/60 bg-white/80 px-2.5 py-0.5">
+          <span
+            className={`h-1.5 w-1.5 rounded-full ${roleColors[point.roleKey].dot}`}
+          />
+          <span className="font-geist text-xs font-medium text-gray-600">
+            {point.role}
+          </span>
+        </div>
+      </div>
+
+      {/* Quote — no quotation marks, reads as dialogue */}
+      <p className="font-geist text-sm leading-relaxed text-gray-700">
+        {point.quote}
+      </p>
+    </div>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/*  Main section                                                       */
+/* ------------------------------------------------------------------ */
+
+export function PlatformSection() {
+  const [activeTab, setActiveTab] = useState<TabKey>('hr')
+  const active = tabs[activeTab]
+  const { setOpen: setContactOpen } = useContactModal()
+
+  const selectTab = useCallback((key: TabKey) => {
+    setActiveTab(key)
+  }, [])
+
+  return (
+    <section id="platform" className="overflow-hidden bg-gray-50 py-16 sm:py-20 lg:py-24 scroll-mt-24">
       <Container>
-        {/* Header */}
+        {/* ════════ HEADER ════════ */}
         <BlurFade inView delay={0.1}>
-          <div className="mb-8 text-center sm:mb-10 lg:mb-12">
+          <div className="mx-auto max-w-2xl text-center">
             <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">
-              The Platform
+              THE GAP
             </p>
             <h2 className="mt-3 font-poppins text-2xl font-bold leading-[1.15] tracking-[-0.06em] text-gray-900 sm:text-3xl lg:text-[40px]">
-              One wallet. Three sides. No paperwork in between.
+              What we heard. What we built.
             </h2>
+            <p className="mt-4 font-geist text-base leading-relaxed text-gray-500">
+              We talked to HR teams, employees, and providers. Here&apos;s what
+              they told us — and what we built to fix it.
+            </p>
           </div>
         </BlurFade>
 
-        {/* Beam container */}
-        <div ref={containerRef} className="relative mx-auto max-w-[900px]">
-          {/* Animated beams — behind content */}
-          {isInView && !reduceMotion ? (
-            <>
-              <AnimatedBeam
-                containerRef={containerRef}
-                fromRef={centerRef}
-                toRef={hrRef}
-                pathColor="var(--color-brand-mid)"
-                pathWidth={2}
-                gradientStartColor="var(--color-brand)"
-                gradientStopColor="var(--color-brand-mid)"
-                duration={4}
-                curvature={40}
-                className="z-0"
-              />
-              <AnimatedBeam
-                containerRef={containerRef}
-                fromRef={centerRef}
-                toRef={employeeRef}
-                pathColor="var(--color-brand-mid)"
-                pathWidth={2}
-                gradientStartColor="var(--color-brand)"
-                gradientStopColor="var(--color-brand-mid)"
-                duration={4}
-                curvature={0}
-                className="z-0"
-              />
-              <AnimatedBeam
-                containerRef={containerRef}
-                fromRef={centerRef}
-                toRef={spRef}
-                pathColor="var(--color-brand-mid)"
-                pathWidth={2}
-                gradientStartColor="var(--color-brand)"
-                gradientStopColor="var(--color-brand-mid)"
-                duration={4}
-                curvature={40}
-                className="z-0"
-              />
-            </>
-          ) : null}
+        {/* ════════ PAIN POINT MARQUEE ════════ */}
+        <div className="relative mt-10 sm:mt-12">
+          {/* Edge fade masks — wider for smooth transition */}
+          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray-50 to-transparent sm:w-36 lg:w-48" />
+          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-gray-50 to-transparent sm:w-36 lg:w-48" />
 
-          {/* Content — in front of beams */}
-          <div className="relative z-10">
-            {/* Center node */}
-            <div className="flex justify-center">
-              <div className="relative flex items-center justify-center">
-                <Ripple
-                  mainCircleSize={64}
-                  mainCircleOpacity={0.12}
-                  numCircles={4}
-                  className="absolute"
-                />
-                <div
-                  ref={centerRef}
-                  className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand shadow-lg"
-                >
-                  <img
-                    src="/favicon-white.svg"
-                    alt="Welluber"
-                    className="h-9 w-9 object-contain"
-                    draggable={false}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Persona cards row */}
-            <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-3">
-              {personas.map((persona) => (
-                <button
-                  key={persona.key}
-                  onClick={() => selectPersona(persona.key)}
-                  className={`relative flex min-h-[120px] overflow-hidden rounded-xl border text-left transition-all duration-200 sm:min-h-[140px] ${
-                    activePersona === persona.key
-                      ? '-translate-y-0.5 border-transparent bg-gradient-to-b from-[color:var(--color-brand-faint)] to-white shadow-[0_0_24px_rgba(67,56,202,0.08),0_8px_24px_rgba(67,56,202,0.04)]'
-                      : 'border-gray-200 bg-white opacity-80 hover:opacity-100 hover:border-gray-300'
-                  }`}
-                  aria-pressed={activePersona === persona.key}
-                >
-                  {/* Beam anchor at top-center */}
-                  <div
-                    ref={refs[persona.key]}
-                    className="pointer-events-none absolute top-0 left-1/2 h-px w-px -translate-x-1/2"
-                  />
-
-                  {/* Left — icon + name */}
-                  <div className="flex flex-1 flex-col gap-2 p-4">
-                    <div
-                      className={`flex h-8 w-8 items-center justify-center rounded-lg transition-colors duration-200 ${
-                        activePersona === persona.key
-                          ? 'bg-brand/10 text-brand'
-                          : 'bg-brand-faint text-brand'
-                      }`}
-                    >
-                      {persona.icon}
-                    </div>
-                    <p className="font-poppins text-sm font-bold text-gray-900 sm:text-base">
-                      {persona.label}
-                    </p>
-                  </div>
-
-                  {/* Right — persona image */}
-                  <div className="relative flex w-[38%] shrink-0 items-end justify-center overflow-hidden">
-                    <div className="flex h-[100px] w-[100px] items-end justify-center sm:h-[120px] sm:w-[120px]">
-                      <img
-                        src={persona.image}
-                        alt={persona.label}
-                        className="max-h-full max-w-full object-contain"
-                        style={{
-                          transform:
-                            persona.key === 'hr'
-                              ? 'scale(1.35)'
-                              : persona.key === 'employee'
-                                ? 'scale(1.35)'
-                                : 'scale(1)',
-                          transformOrigin: 'bottom center',
-                        }}
-                        draggable={false}
-                      />
-                    </div>
-                  </div>
-                </button>
+          <div className="space-y-4">
+            {/* Row 1 — scrolls left */}
+            <Marquee pauseOnHover className="[--duration:35s] [--gap:1rem]">
+              {row1.map((point, i) => (
+                <PainPointCard key={`r1-${i}`} point={point} />
               ))}
-            </div>
+            </Marquee>
+
+            {/* Row 2 — scrolls right */}
+            <Marquee reverse pauseOnHover className="[--duration:40s] [--gap:1rem]">
+              {row2.map((point, i) => (
+                <PainPointCard key={`r2-${i}`} point={point} />
+              ))}
+            </Marquee>
           </div>
         </div>
 
-        {/* Persona content */}
-        <div className="mx-auto mt-8 max-w-[900px] sm:mt-10">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activePersona}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2 }}
-              className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-[1fr_1fr] lg:items-stretch"
-            >
-              {/* Left — copy */}
-              <div className="flex min-w-0 flex-col items-start lg:h-[300px]">
-                <h3 className="font-poppins text-lg font-bold leading-[1.3] tracking-[-0.04em] text-gray-900 sm:text-xl">
-                  {activeData.title}
-                </h3>
-                <p className="mt-3 font-geist text-sm leading-relaxed text-gray-500 sm:text-[15px]">
-                  {activeData.body}
-                </p>
-                <ul className="mt-4 space-y-2">
-                  {activeData.bullets.map((bullet, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckCircle
-                        size={14}
-                        weight="fill"
-                        className="mt-0.5 shrink-0 text-brand"
-                      />
-                      <span className="font-geist text-sm text-gray-600">
-                        {bullet}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+        {/* ════════ TRANSITION HEADER ════════ */}
+        <BlurFade inView delay={0.1}>
+          <div className="mx-auto mt-16 max-w-xl text-center sm:mt-20">
+            <p className="font-geist text-xs font-semibold uppercase tracking-[0.08em] text-brand">
+              THE FIX
+            </p>
+            <h3 className="mt-3 font-poppins text-xl font-bold leading-[1.2] tracking-[-0.04em] text-gray-900 sm:text-2xl">
+              Pick your role. See how Welluber changes things.
+            </h3>
+          </div>
+        </BlurFade>
 
-                {activeData.cta && (
-                  <button
-                    onClick={() => {
-                      if (activeData.cta?.reason) setInitialReason(activeData.cta.reason)
-                      setContactOpen(true)
-                    }}
-                    className="mt-auto inline-flex items-center gap-1.5 rounded-lg border border-brand px-5 py-2.5 font-geist text-sm font-medium text-brand transition-all duration-150 hover:bg-brand-faint"
-                  >
-                    {activeData.cta.label}
-                    <ArrowRight size={14} />
-                  </button>
-                )}
-              </div>
-
-              {/* Right — wireframe visual */}
-              <div className="min-w-0">
-                {activeData.visual}
-              </div>
-            </motion.div>
-          </AnimatePresence>
+        {/* ════════ TABS ════════ */}
+        <div className="mt-8 border-b border-gray-200 sm:mt-10">
+          <div className="flex justify-center gap-4 overflow-x-auto pb-1 sm:gap-8">
+            {tabKeys.map((key) => (
+              <button
+                key={key}
+                onClick={() => selectTab(key)}
+                type="button"
+                className={`-mb-px border-b-2 pb-3 px-1 font-geist text-sm transition-colors duration-150 ${
+                  activeTab === key
+                    ? 'border-brand font-semibold text-gray-900'
+                    : 'border-transparent font-medium text-gray-400 hover:text-gray-600'
+                }`}
+                aria-selected={activeTab === key}
+                role="tab"
+              >
+                {tabs[key].label}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* ════════ TAB CONTENT ════════ */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+            className="mt-10 grid gap-10 lg:mt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-16"
+            role="tabpanel"
+          >
+            {/* Left — copy */}
+            <div className="min-w-0">
+              <h3 className="font-poppins text-xl font-bold leading-[1.3] tracking-[-0.04em] text-gray-900 sm:text-[22px]">
+                {active.title}
+              </h3>
+              <p className="mt-4 font-geist text-[15px] leading-relaxed text-gray-500">
+                {active.body}
+              </p>
+              <ul className="mt-6 space-y-3">
+                {active.bullets.map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <CheckCircle
+                      size={16}
+                      weight="fill"
+                      className="mt-0.5 shrink-0 text-brand"
+                    />
+                    <span className="font-geist text-sm text-gray-600">
+                      {bullet}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+
+            </div>
+
+            {/* Right — visual */}
+            <div className="min-w-0 max-w-xl lg:max-w-none">
+              {active.visual}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </Container>
     </section>
   )

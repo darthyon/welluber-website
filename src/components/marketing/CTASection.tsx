@@ -28,7 +28,7 @@ export function CTASection() {
               Stop chasing claim forms. Start seeing the spend.
             </h2>
             <p className="mt-4 font-geist text-base leading-relaxed text-dark-muted">
-              Founding-cohort companies get founder-led onboarding, direct input on roadmap, and pricing locked in.
+              Early adopters work directly with our founders, help shape what we build next, and lock in their pricing from day one.
             </p>
             <button
               onClick={() => setContactOpen(true)}

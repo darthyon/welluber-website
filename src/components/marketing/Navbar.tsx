@@ -5,18 +5,21 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Container } from '@/components/shared/Container'
 import { MobileNav } from './MobileNav'
-import { useContactModal } from './ContactModal'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
-  const { setOpen: setContactOpen } = useContactModal()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const linkClass =
+    'font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900'
+
+  const activeLinkClass = 'text-gray-900'
 
   return (
     <header
@@ -38,39 +41,24 @@ export function Navbar() {
           />
         </Link>
 
-        {/* Nav links — hidden below md */}
+        {/* Nav links — right-aligned, hidden below md */}
         <nav className="hidden items-center gap-6 md:flex lg:gap-8">
           <Link
-            scroll={false}
-            href="/#features"
-            className="font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+            href="/about-us"
+            className={`${linkClass} ${pathname === '/about-us' ? activeLinkClass : ''}`}
           >
-            Solutions
+            About Us
           </Link>
           <Link
-            scroll={false}
-            href="/#platform"
-            className="font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
-          >
-            Platform
-          </Link>
-          <Link
-            scroll={false}
-            href="/#faq"
-            className="font-geist text-sm font-medium text-gray-500 transition-colors duration-150 hover:text-gray-900"
+            href="/faq"
+            className={`${linkClass} ${pathname === '/faq' ? activeLinkClass : ''}`}
           >
             FAQ
           </Link>
         </nav>
 
-        {/* Desktop CTA + Mobile menu */}
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setContactOpen(true)}
-            className="hidden rounded-lg bg-brand px-4 py-2.5 font-geist text-sm font-medium text-white transition-colors duration-150 hover:bg-brand-dark active:scale-[0.98] md:inline-block"
-          >
-            Talk to Us
-          </button>
+        {/* Mobile menu */}
+        <div className="flex items-center md:hidden">
           <MobileNav />
         </div>
       </Container>
