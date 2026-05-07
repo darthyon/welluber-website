@@ -1,4 +1,4 @@
-## Responsive guardrails — Welluber marketing
+## Responsive guardrails — WellUber marketing
 
 ### Section inventory
 

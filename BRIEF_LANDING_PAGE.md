@@ -1,4 +1,4 @@
-# BRIEF_LANDING_PAGE.md — Welluber Landing Page
+# BRIEF_LANDING_PAGE.md — WellUber Landing Page
 **For:** Claude Code  
 **Version:** 1.0 | **Date:** April 2026  
 **Status:** Ready to build
@@ -28,7 +28,7 @@ Before starting, confirm:
 
 ## Project context
 
-Welluber is a B2B corporate wellness benefits platform for the Malaysian market. Multi-tenant SaaS. Three stakeholders: HR Admin (sets policy + budget), Employees (spend benefits), Service Providers (deliver services, receive payment).
+WellUber is a B2B corporate wellness benefits platform for the Malaysian market. Multi-tenant SaaS. Three stakeholders: HR Admin (sets policy + budget), Employees (spend benefits), Service Providers (deliver services, receive payment).
 
 This is the public marketing landing page. It lives at `app/(marketing)/page.tsx`. It must not inherit the portal layout (no sidebar, no topbar).
 
@@ -184,7 +184,7 @@ Add to `globals.css`:
 
 **Layout:** Logo left / links center / CTA right
 
-**Logo:** `<img src="/logo.svg" alt="Welluber" height={28} />`
+**Logo:** `<img src="/logo.svg" alt="WellUber" height={28} />`
 
 **Nav links:** Solutions / How it works / For HR / For Providers  
 Inter 500 14px `text-gray-500` hover `text-gray-900` transition 150ms
@@ -325,7 +325,7 @@ Inside: `<DashboardWireframe />` (see wireframes section below).
 **Section bg:** `#F9FAFB`  
 **Section label:** "THE PLATFORM"  
 **H2:** "One platform. Every party wins."  
-**Sub:** "Welluber closes the loop between corporate budgets and real-world spending — automatically."
+**Sub:** "WellUber closes the loop between corporate budgets and real-world spending — automatically."
 
 **Layout:** Heading centered above. AnimatedBeam diagram centered below. 600px wide max, centered in container.
 
@@ -337,7 +337,7 @@ Inside: `<DashboardWireframe />` (see wireframes section below).
     [Employee]—[WELLUBER]—[Service Provider]
 ```
 
-Center node: Welluber logo mark (indigo square, white W — 48px)  
+Center node: WellUber logo mark (indigo square, white W — 48px)  
 Three outer nodes: Phosphor icon + label pill
 
 ```tsx
@@ -570,7 +570,7 @@ const faqs = [
   // HR Admin
   {
     q: 'How do employees access their benefits?',
-    a: 'Employees log in to the Welluber member app using their corporate email. Once HR activates their account and assigns a benefit policy, their wallet is live — they can browse providers, purchase vouchers, or walk in to any listed service provider.',
+    a: 'Employees log in to the WellUber member app using their corporate email. Once HR activates their account and assigns a benefit policy, their wallet is live — they can browse providers, purchase vouchers, or walk in to any listed service provider.',
   },
   {
     q: 'What happens if an employee doesn\'t spend their full allocation?',
@@ -578,10 +578,10 @@ const faqs = [
   },
   {
     q: 'Can we set different benefit policies for different employee groups?',
-    a: 'Yes. Welluber supports multiple benefit policies per organisation. You can assign policies by role, department, or employment type. Full-time and part-time employees can have entirely separate entitlements.',
+    a: 'Yes. WellUber supports multiple benefit policies per organisation. You can assign policies by role, department, or employment type. Full-time and part-time employees can have entirely separate entitlements.',
   },
   {
-    q: 'How does Welluber handle compliance and reporting?',
+    q: 'How does WellUber handle compliance and reporting?',
     a: 'Every transaction is logged with a full audit trail — who spent what, where, when, and against which policy. Reports are available in real time. Past records are immutable and cannot be edited after the fact.',
   },
   {
@@ -591,15 +591,15 @@ const faqs = [
   // Service Providers
   {
     q: 'How do I list my business as a service provider?',
-    a: 'Apply through the Welluber SP portal. We verify your business details, set up your service categories, and you\'re live on the platform. The process typically takes 3–5 business days.',
+    a: 'Apply through the WellUber SP portal. We verify your business details, set up your service categories, and you\'re live on the platform. The process typically takes 3–5 business days.',
   },
   {
     q: 'When and how do I receive payment?',
     a: 'Payments are settled on a monthly cycle to your registered bank account. You can view your pending payouts, transaction history, and settlement status in real time through the SP portal.',
   },
   {
-    q: 'Do employees pay me directly or does Welluber?',
-    a: 'For online voucher purchases, Welluber collects payment and settles with you after deducting the agreed commission. For walk-in claims, employees pay their co-payment directly to you — Welluber covers the corporate-funded portion in the next settlement cycle.',
+    q: 'Do employees pay me directly or does WellUber?',
+    a: 'For online voucher purchases, WellUber collects payment and settles with you after deducting the agreed commission. For walk-in claims, employees pay their co-payment directly to you — WellUber covers the corporate-funded portion in the next settlement cycle.',
   },
   // Both
   {
@@ -640,7 +640,7 @@ NOT centered. Left-heavy.
   Your people deserve<br />better benefits.
 </h2>
 <p className="font-inter text-base text-[#9CA3B8] leading-relaxed mt-4 max-w-md">
-  Join forward-thinking Malaysian companies using Welluber to close 
+  Join forward-thinking Malaysian companies using WellUber to close 
   the gap between policy and reality.
 </p>
 <a href="mailto:contact@welluber.com"
@@ -668,7 +668,7 @@ These are decorative product-grounded elements. Build as simple hardcoded JSX �
 
 **Col 1 — Brand:**
 ```tsx
-<img src="/logo.svg" alt="Welluber" height={24} className="brightness-0 invert" />
+<img src="/logo.svg" alt="WellUber" height={24} className="brightness-0 invert" />
 <p className="font-inter text-sm text-gray-500 mt-3 max-w-[200px] leading-relaxed">
   The architectural standard for corporate benefits and employee wellness ecosystems.
 </p>
@@ -686,7 +686,7 @@ Links: Privacy Policy / Terms of Service / Cookies
 All links: Inter 400 14px `text-gray-500` hover `text-gray-300` transition 150ms
 
 **Bottom bar:** `border-t border-[#1F2937] mt-10 pt-6 flex justify-between items-center`  
-Left: `© 2024 Welluber B2B. All rights reserved.` Inter 400 13px `text-gray-600`  
+Left: `© 2024 WellUber B2B. All rights reserved.` Inter 400 13px `text-gray-600`  
 Right: nothing for MVP
 
 ---

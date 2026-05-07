@@ -32,7 +32,7 @@ export function AboutUsPageClient() {
 
           <BlurFade inView delay={0.25}>
             <p className="mt-4 font-geist text-lg leading-relaxed text-gray-600 sm:text-xl">
-              Welluber exists to close that gap — making benefits as intuitive as a conversation,
+              WellUber exists to close that gap — making benefits as intuitive as a conversation,
               not a PDF nobody opens.
             </p>
           </BlurFade>
@@ -82,7 +82,7 @@ export function AboutUsPageClient() {
           <div className="hidden lg:flex lg:flex-col lg:justify-end lg:pt-8 lg:px-8">
             <img
               src="/img-wu-aboutus.webp"
-              alt="Welluber team"
+              alt="WellUber team"
               className="w-full object-contain"
               draggable={false}
             />
@@ -93,7 +93,7 @@ export function AboutUsPageClient() {
         <div className="px-4 pt-6 lg:hidden sm:px-6 sm:pt-8">
           <img
             src="/img-wu-aboutus.webp"
-            alt="Welluber team"
+            alt="WellUber team"
             className="w-full object-contain"
             draggable={false}
           />

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { FAQPageClient } from '@/components/marketing/FAQPageClient'
 
 export const metadata: Metadata = {
-  title: 'FAQ — Welluber',
-  description: 'Find answers to common questions about Welluber for HR teams, service providers, and employees.',
+  title: 'FAQ — WellUber',
+  description: 'Find answers to common questions about WellUber for HR teams, service providers, and employees.',
 }
 
 export default function FAQPage() {

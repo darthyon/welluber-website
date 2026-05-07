@@ -32,7 +32,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center">
           <img
             src="/img_logomark.svg"
-            alt="Welluber"
+            alt="WellUber"
             className="h-8 w-auto object-contain"
             width={120}
             height={32}

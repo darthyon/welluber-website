@@ -28,7 +28,7 @@ const faqGroups = [
         a: 'Yes. You can assign policies by role, department, or employment type. Full-time and part-time employees can have entirely separate entitlements.',
       },
       {
-        q: 'How does Welluber handle compliance and reporting?',
+        q: 'How does WellUber handle compliance and reporting?',
         a: 'Every transaction is logged with a full audit trail — who spent what, where, when, and against which policy. Reports are available in real time. Past records are immutable and cannot be edited after the fact.',
       },
       {
@@ -42,15 +42,15 @@ const faqGroups = [
     items: [
       {
         q: 'How do I list my business as a service provider?',
-        a: "Apply through the Welluber SP portal. We verify your business details, set up your service categories, and you're live on the platform. The process typically takes 3–5 business days.",
+        a: "Apply through the WellUber SP portal. We verify your business details, set up your service categories, and you're live on the platform. The process typically takes 3–5 business days.",
       },
       {
         q: 'When and how do I receive payment?',
         a: 'Payments are settled monthly to your registered bank account. You can view your pending payouts, transaction history, and settlement status in real time through the SP portal.',
       },
       {
-        q: 'Do employees pay me directly or does Welluber?',
-        a: 'For online voucher purchases, Welluber collects payment and settles with you after deducting the agreed commission. For walk-in claims, employees pay their co-payment directly to you — Welluber covers the corporate-funded portion in the next settlement cycle.',
+        q: 'Do employees pay me directly or does WellUber?',
+        a: 'For online voucher purchases, WellUber collects payment and settles with you after deducting the agreed commission. For walk-in claims, employees pay their co-payment directly to you — WellUber covers the corporate-funded portion in the next settlement cycle.',
       },
     ],
   },

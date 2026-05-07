@@ -273,7 +273,7 @@ export function PlatformSection() {
               THE FIX
             </p>
             <h3 className="mt-3 font-poppins text-xl font-bold leading-[1.2] tracking-[-0.04em] text-gray-900 sm:text-2xl">
-              Pick your role. See how Welluber changes things.
+              Pick your role. See how WellUber changes things.
             </h3>
           </div>
         </BlurFade>

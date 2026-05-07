@@ -16,7 +16,7 @@ export function Footer() {
             </Link>
             <span className="h-4 w-px bg-gray-800" aria-hidden="true" />
             <span className="text-[13px] text-gray-500">
-              © 2026 Welluber Sdn Bhd. All rights reserved.
+              © 2026 WellUber Sdn Bhd. All rights reserved.
             </span>
           </div>
         </div>

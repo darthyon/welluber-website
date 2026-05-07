@@ -88,14 +88,14 @@ export default function PrivacyPolicyPage() {
         </h1>
 
         <p className="mt-4 font-geist text-sm leading-relaxed text-gray-600">
-          <span className="font-semibold text-gray-900">Welluber Sdn Bhd</span>
+          <span className="font-semibold text-gray-900">WellUber Sdn Bhd</span>
           <br />
           Last updated: April 2026
         </p>
 
         <SectionTitle>1. Who We Are</SectionTitle>
         <BodyP>
-          Welluber Sdn Bhd (&quot;Welluber&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) operates a corporate wellness
+          WellUber Sdn Bhd (&quot;WellUber&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) operates a corporate wellness
           benefits platform that connects organisations, employees, and service providers. We are the data processor acting on behalf of
           the organisations (&quot;HR Clients&quot;) that use our platform to manage employee benefits.
         </BodyP>
@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage() {
           This Privacy Policy explains what personal data we collect, why we collect it, how we use and protect it, and your rights under
           the <span className="font-semibold text-gray-900">Personal Data Protection Act 2010 (PDPA)</span> of Malaysia.
         </BodyP>
-        <BodyP>By using the Welluber platform, you consent to the practices described in this policy.</BodyP>
+        <BodyP>By using the WellUber platform, you consent to the practices described in this policy.</BodyP>
 
         <SectionTitle>2. The Data We Collect</SectionTitle>
         <BodyP>We collect the following categories of personal data depending on your role on the platform:</BodyP>
@@ -181,20 +181,20 @@ export default function PrivacyPolicyPage() {
 
         <SectionTitle>4. Data Processed on Behalf of HR Clients</SectionTitle>
         <BodyP>
-          Where an HR Client uploads or submits employee data to Welluber — including names, roles, departments, and salary bands —
-          Welluber acts as a <span className="font-semibold text-gray-900">data processor</span> on behalf of that HR Client, who is the{' '}
+          Where an HR Client uploads or submits employee data to WellUber — including names, roles, departments, and salary bands —
+          WellUber acts as a <span className="font-semibold text-gray-900">data processor</span> on behalf of that HR Client, who is the{' '}
           <span className="font-semibold text-gray-900">data controller</span>.
         </BodyP>
         <BodyP>HR Clients are responsible for:</BodyP>
         <BulletList
           items={[
-            'Obtaining lawful consent from their employees to share such data with Welluber',
+            'Obtaining lawful consent from their employees to share such data with WellUber',
             'Ensuring the accuracy of employee data submitted to the platform',
-            'Notifying Welluber of any data correction or deletion requests from employees',
+            'Notifying WellUber of any data correction or deletion requests from employees',
           ]}
         />
         <BodyP>
-          Welluber will process such data only as instructed by the HR Client and as necessary to deliver the platform services.
+          WellUber will process such data only as instructed by the HR Client and as necessary to deliver the platform services.
         </BodyP>
 
         <SectionTitle>5. How We Share Your Data</SectionTitle>
@@ -297,7 +297,7 @@ export default function PrivacyPolicyPage() {
         <BodyP>
           <span className="font-semibold text-gray-900">Data Protection Officer</span>
           <br />
-          Welluber Sdn Bhd
+          WellUber Sdn Bhd
           <br />
           Kuala Lumpur, Malaysia
         </BodyP>

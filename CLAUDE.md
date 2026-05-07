@@ -1,5 +1,5 @@
 # Project
-Welluber — flexi benefit management platform marketing landing page.
+WellUber — flexi benefit management platform marketing landing page.
 
 # Platform
 Web — one-page marketing landing site (static export)

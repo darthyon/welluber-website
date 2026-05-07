@@ -55,31 +55,31 @@ export default function TermsOfServicePage() {
         </h1>
 
         <p className="mt-4 font-geist text-sm leading-relaxed text-gray-600">
-          <span className="font-semibold text-gray-900">Welluber Sdn Bhd</span>
+          <span className="font-semibold text-gray-900">WellUber Sdn Bhd</span>
           <br />
           Last updated: April 2026
         </p>
 
         <SectionTitle>1. About These Terms</SectionTitle>
         <BodyP>
-          These Terms and Conditions (&quot;Terms&quot;) govern your access to and use of the Welluber platform operated by{' '}
-          <span className="font-semibold text-gray-900">Welluber Sdn Bhd</span> (Company No. [XXXXXXX-X]), a company incorporated in
-          Malaysia (&quot;Welluber&quot;, &quot;we&quot;, &quot;us&quot;).
+          These Terms and Conditions (&quot;Terms&quot;) govern your access to and use of the WellUber platform operated by{' '}
+          <span className="font-semibold text-gray-900">WellUber Sdn Bhd</span> (Company No. [XXXXXXX-X]), a company incorporated in
+          Malaysia (&quot;WellUber&quot;, &quot;we&quot;, &quot;us&quot;).
         </BodyP>
         <BodyP>
-          By registering for or using the Welluber platform, you agree to be bound by these Terms. If you do not agree, you must not use
+          By registering for or using the WellUber platform, you agree to be bound by these Terms. If you do not agree, you must not use
           the platform.
         </BodyP>
         <BodyP>These Terms apply to all users of the platform, including:</BodyP>
         <BulletList
           items={[
-            'HR Clients — organisations that subscribe to Welluber to manage employee benefits',
+            'HR Clients — organisations that subscribe to WellUber to manage employee benefits',
             'Members — employees whose accounts are activated by an HR Client',
-            'Service Providers (SPs) — businesses listed on the Welluber network',
+            'Service Providers (SPs) — businesses listed on the WellUber network',
           ]}
         />
         <BodyP>
-          Where a separate written agreement exists between Welluber and an HR Client or Service Provider, that agreement takes precedence
+          Where a separate written agreement exists between WellUber and an HR Client or Service Provider, that agreement takes precedence
           over these Terms to the extent of any conflict.
         </BodyP>
 
@@ -99,13 +99,13 @@ export default function TermsOfServicePage() {
             'Reverse-engineer, copy, or replicate any part of the platform',
             'Use the platform to transmit unlawful, harmful, or fraudulent content',
             'Circumvent any access controls, spending limits, or policy rules configured on the platform',
-            'Use automated scripts or bots to interact with the platform without prior written consent from Welluber',
+            'Use automated scripts or bots to interact with the platform without prior written consent from WellUber',
           ]}
         />
 
         <SubTitle>2.3 Account Suspension</SubTitle>
         <BodyP>
-          Welluber reserves the right to suspend or terminate any account that violates these Terms, without prior notice where
+          WellUber reserves the right to suspend or terminate any account that violates these Terms, without prior notice where
           circumstances require immediate action. We will notify affected parties as soon as practicable.
         </BodyP>
 
@@ -120,21 +120,21 @@ export default function TermsOfServicePage() {
 
         <SubTitle>3.1 Subscription and Onboarding</SubTitle>
         <BodyP>
-          HR Clients subscribe to the Welluber platform under a separate service agreement. These Terms apply in addition to that
+          HR Clients subscribe to the WellUber platform under a separate service agreement. These Terms apply in addition to that
           agreement.
         </BodyP>
 
         <SubTitle>3.2 Benefit Policy Configuration</SubTitle>
         <BodyP>
           HR Clients are solely responsible for the benefit policies they configure on the platform, including spending limits, eligible
-          categories, policy periods, and employee eligibility rules. Welluber executes policies as configured — we do not validate whether
+          categories, policy periods, and employee eligibility rules. WellUber executes policies as configured — we do not validate whether
           a policy complies with the HR Client&apos;s internal HR policies or employment contracts.
         </BodyP>
 
         <SubTitle>3.3 Employee Data</SubTitle>
         <BodyP>
-          By uploading employee data to Welluber, the HR Client warrants that it has obtained all necessary consents and authorisations
-          under Malaysian law to share that data with Welluber for the purposes of operating the benefits platform.
+          By uploading employee data to WellUber, the HR Client warrants that it has obtained all necessary consents and authorisations
+          under Malaysian law to share that data with WellUber for the purposes of operating the benefits platform.
         </BodyP>
 
         <SubTitle>3.4 Policy Changes</SubTitle>
@@ -154,13 +154,13 @@ export default function TermsOfServicePage() {
         <SubTitle>4.1 Wallet and Entitlements</SubTitle>
         <BodyP>
           Members&apos; wallet balances and benefit entitlements are determined entirely by the benefit policy configured by their HR Client.
-          Welluber has no discretion over the amount, category, or duration of a member&apos;s entitlements.
+          WellUber has no discretion over the amount, category, or duration of a member&apos;s entitlements.
         </BodyP>
 
         <SubTitle>4.2 Spending</SubTitle>
         <BodyP>
           Members may spend their wallet balance with listed Service Providers, subject to the categories and limits set by their HR
-          Client&apos;s policy. Wallet balances may not be withdrawn as cash, transferred to another person, or used outside the Welluber
+          Client&apos;s policy. Wallet balances may not be withdrawn as cash, transferred to another person, or used outside the WellUber
           network.
         </BodyP>
 
@@ -174,7 +174,7 @@ export default function TermsOfServicePage() {
         <BodyP>
           If a Member believes a transaction has been incorrectly charged or recorded, they must raise a dispute within{' '}
           <span className="font-semibold text-gray-900">14 days</span> of the transaction date by contacting{' '}
-          <span className="font-semibold text-gray-900">support@welluber.com</span>. Welluber will investigate and respond within{' '}
+          <span className="font-semibold text-gray-900">support@welluber.com</span>. WellUber will investigate and respond within{' '}
           <span className="font-semibold text-gray-900">10 business days</span>.
         </BodyP>
 
@@ -182,33 +182,33 @@ export default function TermsOfServicePage() {
 
         <SubTitle>5.1 Listing and Approval</SubTitle>
         <BodyP>
-          Service Providers must apply to join the Welluber network and are subject to Welluber&apos;s verification and approval process.
-          Welluber reserves the right to decline or remove any Service Provider at its discretion, including for breach of these Terms or
+          Service Providers must apply to join the WellUber network and are subject to WellUber&apos;s verification and approval process.
+          WellUber reserves the right to decline or remove any Service Provider at its discretion, including for breach of these Terms or
           conduct detrimental to the platform or its users.
         </BodyP>
 
         <SubTitle>5.2 Accurate Listings</SubTitle>
         <BodyP>
           Service Providers are responsible for ensuring that their service listings, categories, pricing, and business information on the
-          platform are accurate and kept up to date. Welluber is not liable for any loss arising from inaccurate listings.
+          platform are accurate and kept up to date. WellUber is not liable for any loss arising from inaccurate listings.
         </BodyP>
 
         <SubTitle>5.3 Service Delivery</SubTitle>
         <BodyP>
-          Service Providers are solely responsible for the quality and delivery of services to Members. Welluber facilitates payment and
+          Service Providers are solely responsible for the quality and delivery of services to Members. WellUber facilitates payment and
           listing only — we are not a party to the service transaction between a Service Provider and a Member.
         </BodyP>
 
         <SubTitle>5.4 Commission</SubTitle>
         <BodyP>
-          By joining the Welluber network, Service Providers agree to Welluber deducting an agreed commission rate from each transaction
-          before settlement. The applicable commission rate is set out in the Service Provider&apos;s onboarding agreement. Welluber reserves
+          By joining the WellUber network, Service Providers agree to WellUber deducting an agreed commission rate from each transaction
+          before settlement. The applicable commission rate is set out in the Service Provider&apos;s onboarding agreement. WellUber reserves
           the right to revise commission rates with <span className="font-semibold text-gray-900">30 days&apos; written notice</span>.
         </BodyP>
 
         <SubTitle>5.5 Settlement</SubTitle>
         <BodyP>
-          Welluber settles outstanding amounts to Service Providers on a{' '}
+          WellUber settles outstanding amounts to Service Providers on a{' '}
           <span className="font-semibold text-gray-900">monthly cycle</span>, to the bank account registered during onboarding. Settlement is
           subject to:
         </BodyP>
@@ -226,14 +226,14 @@ export default function TermsOfServicePage() {
         <SubTitle>5.6 Settlement Disputes</SubTitle>
         <BodyP>
           If a Service Provider believes a settlement amount is incorrect, they must raise a dispute within{' '}
-          <span className="font-semibold text-gray-900">14 days</span> of the settlement date. Welluber will investigate and respond within{' '}
+          <span className="font-semibold text-gray-900">14 days</span> of the settlement date. WellUber will investigate and respond within{' '}
           <span className="font-semibold text-gray-900">10 business days</span>. Undisputed amounts will be treated as accepted.
         </BodyP>
 
         <SubTitle>5.7 Tax Obligations</SubTitle>
         <BodyP>
           Service Providers are solely responsible for their own tax obligations arising from payments received through the platform.
-          Welluber does not provide tax advice and is not liable for any tax liability incurred by a Service Provider.
+          WellUber does not provide tax advice and is not liable for any tax liability incurred by a Service Provider.
         </BodyP>
 
         <SectionTitle>6. Payments and Third-Party Gateways</SectionTitle>
@@ -242,14 +242,14 @@ export default function TermsOfServicePage() {
           to be bound by the relevant payment gateway&apos;s terms and conditions in addition to these Terms.
         </BodyP>
         <BodyP>
-          Welluber is not responsible for any failure, error, or delay caused by a third-party payment gateway, though we will take
+          WellUber is not responsible for any failure, error, or delay caused by a third-party payment gateway, though we will take
           reasonable steps to assist in resolving such issues.
         </BodyP>
 
         <SectionTitle>7. Intellectual Property</SectionTitle>
         <BodyP>
-          All content, software, trademarks, and materials on the Welluber platform are the intellectual property of Welluber Sdn Bhd or its
-          licensors. Nothing in these Terms grants you any right to use Welluber&apos;s intellectual property without prior written consent.
+          All content, software, trademarks, and materials on the WellUber platform are the intellectual property of WellUber Sdn Bhd or its
+          licensors. Nothing in these Terms grants you any right to use WellUber&apos;s intellectual property without prior written consent.
         </BodyP>
         <BodyP>You may not reproduce, distribute, or create derivative works from any part of the platform.</BodyP>
 
@@ -257,20 +257,20 @@ export default function TermsOfServicePage() {
 
         <SubTitle>8.1 No Warranty</SubTitle>
         <BodyP>
-          The platform is provided on an &quot;as is&quot; basis. To the fullest extent permitted by Malaysian law, Welluber makes no
+          The platform is provided on an &quot;as is&quot; basis. To the fullest extent permitted by Malaysian law, WellUber makes no
           warranties — express or implied — regarding the platform&apos;s fitness for a particular purpose, uninterrupted availability, or
           freedom from errors.
         </BodyP>
 
         <SubTitle>8.2 Limitation of Liability</SubTitle>
         <BodyP>
-          To the maximum extent permitted by law, Welluber&apos;s aggregate liability to any user arising out of or in connection with these
-          Terms or the use of the platform shall not exceed the total fees paid by that user to Welluber in the{' '}
+          To the maximum extent permitted by law, WellUber&apos;s aggregate liability to any user arising out of or in connection with these
+          Terms or the use of the platform shall not exceed the total fees paid by that user to WellUber in the{' '}
           <span className="font-semibold text-gray-900">three (3) months</span> preceding the event giving rise to the claim.
         </BodyP>
 
         <SubTitle>8.3 Excluded Losses</SubTitle>
-        <BodyP>Welluber shall not be liable for:</BodyP>
+        <BodyP>WellUber shall not be liable for:</BodyP>
         <BulletList
           items={[
             'Loss of profits, revenue, or business opportunity',
@@ -283,7 +283,7 @@ export default function TermsOfServicePage() {
 
         <SubTitle>8.4 Indemnity</SubTitle>
         <BodyP>
-          You agree to indemnify and hold harmless Welluber, its directors, employees, and agents from any claim, liability, or expense
+          You agree to indemnify and hold harmless WellUber, its directors, employees, and agents from any claim, liability, or expense
           (including legal fees) arising from your breach of these Terms or your misuse of the platform.
         </BodyP>
 
@@ -296,16 +296,16 @@ export default function TermsOfServicePage() {
           deactivation through their HR administrator.
         </BodyP>
 
-        <SubTitle>9.2 By Welluber</SubTitle>
+        <SubTitle>9.2 By WellUber</SubTitle>
         <BodyP>
-          Welluber may suspend or terminate access to the platform at any time for breach of these Terms, non-payment, or conduct that poses
+          WellUber may suspend or terminate access to the platform at any time for breach of these Terms, non-payment, or conduct that poses
           a risk to the platform or other users. We will provide reasonable notice except where immediate action is necessary.
         </BodyP>
 
         <SubTitle>9.3 Effect of Termination</SubTitle>
         <BodyP>
           Upon termination, outstanding settlements owed to Service Providers will be processed in the next available cycle. Wallet
-          balances belonging to Members will be handled in accordance with the HR Client&apos;s policy. Welluber&apos;s data retention
+          balances belonging to Members will be handled in accordance with the HR Client&apos;s policy. WellUber&apos;s data retention
           obligations survive termination.
         </BodyP>
 
@@ -336,7 +336,7 @@ export default function TermsOfServicePage() {
 
         <SectionTitle>13. Contact Us</SectionTitle>
         <BodyP>
-          <span className="font-semibold text-gray-900">Welluber Sdn Bhd</span>
+          <span className="font-semibold text-gray-900">WellUber Sdn Bhd</span>
           <br />
           Kuala Lumpur, Malaysia
         </BodyP>

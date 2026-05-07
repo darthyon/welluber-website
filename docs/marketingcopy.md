@@ -1,4 +1,4 @@
-# Welluber — Marketing Copy v2
+# WellUber — Marketing Copy v2
 _Revised: April 2026_
 
 ---
@@ -7,10 +7,10 @@ _Revised: April 2026_
 
 The page tells one story across three audiences:
 
-> Corporate wellness is broken because the money never reaches the people it's meant for — and no one in the middle gets paid cleanly either. Welluber fixes the whole chain.
+> Corporate wellness is broken because the money never reaches the people it's meant for — and no one in the middle gets paid cleanly either. WellUber fixes the whole chain.
 
 **Page arc:**
-1. **Hero** — State the broken status quo, position Welluber as the fix
+1. **Hero** — State the broken status quo, position WellUber as the fix
 2. **Network** — Show this is a three-sided problem with a three-sided solution
 3. **Audience tabs** — Let each stakeholder see themselves winning specifically
 4. **Features** — Prove the platform delivers on that promise
@@ -23,7 +23,7 @@ The page tells one story across three audiences:
 
 | Element | Copy |
 |---|---|
-| Logo | Welluber |
+| Logo | WellUber |
 | Nav links | Solutions · For HR · For Providers |
 | CTA | Talk to Us |
 
@@ -46,7 +46,7 @@ The page tells one story across three audiences:
 _(Keep as-is — clean and direct.)_
 
 **Sub:**
-> Most benefits platforms serve one stakeholder. Welluber was built for all three.
+> Most benefits platforms serve one stakeholder. WellUber was built for all three.
 
 **Rationale:** Reframes from feature description to intentional network design. Signals to investors that this is a three-sided marketplace, not a bolted-on tool.
 
@@ -167,7 +167,7 @@ A: You decide — balances can roll over, expire at cycle end, or be redistribut
 **Q: Can we set different benefit policies for different employee groups?**
 A: Yes. You can assign policies by role, department, or employment type. Full-time and part-time employees can have entirely separate entitlements.
 
-**Q: How does Welluber handle compliance and reporting?**
+**Q: How does WellUber handle compliance and reporting?**
 A: Every transaction is logged with a full audit trail — who spent what, where, when, and against which policy. Reports are available in real time. Past records are immutable and cannot be edited after the fact.
 
 **Q: What's the minimum company size to get started?**
@@ -178,13 +178,13 @@ A: There's no minimum. We work with companies from 20 employees to 2,000+. Prici
 ### For Service Providers
 
 **Q: How do I list my business as a service provider?**
-A: Apply through the Welluber SP portal. We verify your business details, set up your service categories, and you're live on the platform. The process typically takes 3–5 business days.
+A: Apply through the WellUber SP portal. We verify your business details, set up your service categories, and you're live on the platform. The process typically takes 3–5 business days.
 
 **Q: When and how do I receive payment?**
 A: Payments are settled monthly to your registered bank account. You can view your pending payouts, transaction history, and settlement status in real time through the SP portal.
 
-**Q: Do employees pay me directly or does Welluber?**
-A: For online voucher purchases, Welluber collects payment and settles with you after deducting the agreed commission. For walk-in claims, employees pay their co-payment directly to you — Welluber covers the corporate-funded portion in the next settlement cycle.
+**Q: Do employees pay me directly or does WellUber?**
+A: For online voucher purchases, WellUber collects payment and settles with you after deducting the agreed commission. For walk-in claims, employees pay their co-payment directly to you — WellUber covers the corporate-funded portion in the next settlement cycle.
 
 ---
 
@@ -206,7 +206,7 @@ A: Most organisations are live within 1–2 weeks. That includes HR onboarding, 
 > Your people deserve benefits that actually reach them.
 
 **Sub:**
-> Join the companies using Welluber to close the gap between wellness budgets and real outcomes — for HR, employees, and providers alike.
+> Join the companies using WellUber to close the gap between wellness budgets and real outcomes — for HR, employees, and providers alike.
 
 **CTA:** Talk to Us
 
@@ -240,7 +240,7 @@ RM 136,000 spent of RM 200,000
 | Element | Copy |
 |---|---|
 | Links | Privacy Policy · Terms of Service |
-| Copyright | © 2026 Welluber Sdn Bhd. All rights reserved. |
+| Copyright | © 2026 WellUber Sdn Bhd. All rights reserved. |
 
 ---
 
@@ -248,7 +248,7 @@ RM 136,000 spent of RM 200,000
 
 When adapting for a deck or investor landing variant, the reframe that works:
 
-> **Welluber is the settlement rail for the corporate wellness market.** HR is the buyer, employees are the end user, service providers are the supply — and Welluber takes a cut of every transaction that flows through.
+> **WellUber is the settlement rail for the corporate wellness market.** HR is the buyer, employees are the end user, service providers are the supply — and WellUber takes a cut of every transaction that flows through.
 
 Suggested investor H2:
 > Corporate wellness is a multi-billion ringgit market. Most of it still runs on spreadsheets and manual claims.

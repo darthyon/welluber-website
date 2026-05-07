@@ -128,7 +128,7 @@ function ReceiptCard() {
             <Favicon size={16} className="text-white" />
           </div>
           <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
-            Welluber
+            WellUber
           </p>
           <p className="mt-0.5 text-[10px] text-gray-300">28 Apr 2026 · #WB-2847</p>
         </div>

@@ -1,17 +1,17 @@
 # Privacy Policy
 
-**Welluber Sdn Bhd**
+**WellUber Sdn Bhd**
 Last updated: April 2026
 
 ---
 
 ## 1. Who We Are
 
-Welluber Sdn Bhd ("Welluber", "we", "us", or "our") operates a corporate wellness benefits platform that connects organisations, employees, and service providers. We are the data processor acting on behalf of the organisations ("HR Clients") that use our platform to manage employee benefits.
+WellUber Sdn Bhd ("WellUber", "we", "us", or "our") operates a corporate wellness benefits platform that connects organisations, employees, and service providers. We are the data processor acting on behalf of the organisations ("HR Clients") that use our platform to manage employee benefits.
 
 This Privacy Policy explains what personal data we collect, why we collect it, how we use and protect it, and your rights under the **Personal Data Protection Act 2010 (PDPA)** of Malaysia.
 
-By using the Welluber platform, you consent to the practices described in this policy.
+By using the WellUber platform, you consent to the practices described in this policy.
 
 ---
 
@@ -68,14 +68,14 @@ We do not use your personal data for advertising or sell it to third parties.
 
 ## 4. Data Processed on Behalf of HR Clients
 
-Where an HR Client uploads or submits employee data to Welluber — including names, roles, departments, and salary bands — Welluber acts as a **data processor** on behalf of that HR Client, who is the **data controller**.
+Where an HR Client uploads or submits employee data to WellUber — including names, roles, departments, and salary bands — WellUber acts as a **data processor** on behalf of that HR Client, who is the **data controller**.
 
 HR Clients are responsible for:
-- Obtaining lawful consent from their employees to share such data with Welluber
+- Obtaining lawful consent from their employees to share such data with WellUber
 - Ensuring the accuracy of employee data submitted to the platform
-- Notifying Welluber of any data correction or deletion requests from employees
+- Notifying WellUber of any data correction or deletion requests from employees
 
-Welluber will process such data only as instructed by the HR Client and as necessary to deliver the platform services.
+WellUber will process such data only as instructed by the HR Client and as necessary to deliver the platform services.
 
 ---
 
@@ -154,7 +154,7 @@ We may update this Privacy Policy from time to time. We will notify registered u
 ## 12. Contact Us
 
 **Data Protection Officer**
-Welluber Sdn Bhd
+WellUber Sdn Bhd
 Kuala Lumpur, Malaysia
 
 Email: contact@welluber.com

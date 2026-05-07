@@ -134,7 +134,7 @@ export function NetworkSection() {
               >
                 <img
                   src="/favicon-white.svg"
-                  alt="Welluber"
+                  alt="WellUber"
                   className="h-10 w-10 object-contain"
                   draggable={false}
                 />

@@ -47,7 +47,7 @@ export function PolicyFragment() {
 
       {/* Center node */}
       <div className="absolute left-1/2 top-1/2 z-10 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-brand shadow-lg">
-        <Image src="/favicon-white.svg" alt="Welluber" width={22} height={22} style={{ width: '22px', height: '22px' }} />
+        <Image src="/favicon-white.svg" alt="WellUber" width={22} height={22} style={{ width: '22px', height: '22px' }} />
       </div>
     </div>
   )

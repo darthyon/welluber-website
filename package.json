@@ -1,7 +1,7 @@
 {
   "name": "welluber-website",
   "version": "1.0.0",
-  "description": "Welluber marketing landing page",
+  "description": "WellUber marketing landing page",
   "main": "next.config.js",
   "directories": {
     "doc": "docs"

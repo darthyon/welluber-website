@@ -1,4 +1,4 @@
-# DESIGN.md — Welluber Landing Page
+# DESIGN.md — WellUber Landing Page
 **Version:** 2.0 | **Date:** April 2026 | **Status:** Locked
 
 ---
@@ -274,7 +274,7 @@ Button press:           scale(0.98), 100ms ease
 
 **CTA overline:** "READY TO INVEST IN YOUR PEOPLE?"
 **CTA H2:** "Your people deserve better benefits."
-**CTA sub:** "Join forward-thinking Malaysian companies using Welluber to close the gap between policy and reality."
+**CTA sub:** "Join forward-thinking Malaysian companies using WellUber to close the gap between policy and reality."
 **CTA button:** "Talk to Us"
 
 ---
