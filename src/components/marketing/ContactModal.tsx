@@ -10,6 +10,11 @@ import {
 } from '@/components/ui/dialog'
 import { WhatsappLogo, EnvelopeSimple } from '@phosphor-icons/react'
 
+const WHATSAPP_URL =
+  'https://wa.me/601154554312?text=Hi%20WellUber%20team%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20corporate%20wellness%20platform.'
+const EMAIL_URL =
+  'mailto:norman.leaw@welluber.com?subject=WellUber%20Enquiry&body=Hi%20Norman%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20WellUber.%0A%0AThanks.'
+
 /* ------------------------------------------------------------------ */
 /*  Context                                                            */
 /* ------------------------------------------------------------------ */
@@ -70,8 +75,8 @@ function ContactChoiceDialog({
           {/* WhatsApp */}
           <button
             onClick={() => {
-              // TODO: link to WhatsApp API
-              console.log('WhatsApp clicked')
+              window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')
+              onOpenChange(false)
             }}
             className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 text-left transition-all duration-150 hover:border-brand hover:bg-brand-faint hover:shadow-sm active:scale-[0.98]"
           >
@@ -87,8 +92,8 @@ function ContactChoiceDialog({
           {/* Email */}
           <button
             onClick={() => {
-              // TODO: link to email address
-              console.log('Email clicked')
+              window.location.href = EMAIL_URL
+              onOpenChange(false)
             }}
             className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 text-left transition-all duration-150 hover:border-brand hover:bg-brand-faint hover:shadow-sm active:scale-[0.98]"
           >
